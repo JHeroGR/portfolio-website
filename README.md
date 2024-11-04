@@ -1,24 +1,9 @@
 # portfolio-website
 
-## Project setup
-```
-npm install
-```
+My Portfolio Version 1
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Written in VueJS includes a Home, About, Work, and Contact pages.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Written in VueJS using Bootstrap and custom CSS.
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+-Joel Gutierrez
