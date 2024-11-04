@@ -4,18 +4,15 @@
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <img
-            src="https://www.w3schools.com/howto/img_avatar.png"
+            :src=src
             alt="Avatar"
             style="width: 300px; height: 300px"
           />
         </div>
         <div class="flip-card-back">
-          <h1>Ruby Sinatra Starter Project</h1>
-          <p>
-            Created a starter project with the Ruby programming language on the Sinatra framework for 
-            programmers to use for their projects, whether personal or professional.
-          </p>
-          <a href='https://github.com/JHeroGR/ruby-sinatra-starter-app' class='btn btn-light'> Go to Project</a>
+          <h1>{{ projectname }}</h1>
+          <p>{{ description }}</p>
+          <a href={{href}} class='btn btn-light'> Go to Project</a>
         </div>
       </div>
     </div>
@@ -25,6 +22,12 @@
 <script>
 export default {
   name: "CardComponent",
+  props: {
+    src: String,
+    projectname: String,
+    description: String,
+    href: String
+  }
 };
 </script>
 
