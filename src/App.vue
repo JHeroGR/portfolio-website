@@ -1,5 +1,5 @@
 <template>
-  <div class='logo'>Joel Gutierrez</div>
+  <h1 class='logo'>Joel Gutierrez</h1>
   <NavBarComponent />
   <router-view/>
 </template>
@@ -22,6 +22,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  padding-top: 5%;
 }
 
 </style>
