@@ -1,16 +1,22 @@
 <template>
+  <div class="d-flex flex-column min-vh-100">
+
   <h1 class='logo'>Joel Gutierrez</h1>
   <NavBarComponent />
-  <router-view/>
+  <router-view />
+  <FooterComponent />
+</div>
+
 </template>
 
 <script>
 import NavBarComponent from '@/components/NavBarComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
 
 export default {
   name: 'App',
   components: { 
-    NavBarComponent,
+    NavBarComponent, FooterComponent
   }
 }
 </script>
@@ -22,7 +28,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  padding-top: 5%;
+}
+
+#app h1 {
+  padding-top: 20px;
 }
 
 </style>

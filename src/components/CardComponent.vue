@@ -3,11 +3,7 @@
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img
-            :src=src
-            alt="Avatar"
-            style="width: 300px; height: 300px"
-          />
+          <img :src=src alt="Avatar" style="width: 300px; height: 300px"/>
         </div>
         <div class="flip-card-back">
           <h1>{{ projectname }}</h1>
@@ -70,8 +66,9 @@ export default {
 }
 
 .flip-card-front {
-  background-color: #bbb;
+  background: #bbb;
   color: black;
+  box-shadow: black;
 }
 
 .flip-card-back {
@@ -82,12 +79,14 @@ export default {
 
 .flip-card-back h1,
 .flip-card-back p {
-  margin: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .flip-card-back h1 {
     font-size: x-large;
     font-weight: bold;
+    margin-top: 5vh;
 }
 
 .flip-card-back a {

@@ -1,8 +1,8 @@
 <template lang="">
     <nav id='desktop-nav'>
         <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
         <router-link to="/work">Work</router-link> |
+        <router-link to="/about">About</router-link> |
         <router-link to="/contact">Contact</router-link>
     </nav>
 </template>
@@ -17,6 +17,7 @@ export default {
     
 nav {
   padding: 30px;
+  font-size: larger;
 }
 
 nav .logo {
