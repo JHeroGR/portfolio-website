@@ -4,7 +4,7 @@
         <div class="container">
           <div class="row">
             <div class="col">
-              <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Name / Agency / Company" />
+              <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Name / Company" />
             </div>
             <div class="col">
               <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Email" />
