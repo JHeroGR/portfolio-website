@@ -1,9 +1,12 @@
 <template>
   <div class="d-flex flex-column min-vh-100">
-
   <h1 class='logo'>Joel Gutierrez</h1>
   <NavBarComponent />
-  <router-view />
+    <router-view v-slot="{ Component }">
+      <transition name="slide" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   <FooterComponent />
 </div>
 
@@ -34,4 +37,17 @@ export default {
   padding-top: 20px;
 }
 
+/* Transitions */
+
+/* Slide transition */
+.slide-enter-active, .slide-leave-active {
+  transition: transform 0.5s ease;
+}
+.slide-enter, .slide-leave-to {
+  transform: translateX(100%);
+
+}
+.slide-leave {
+  transform: translateX(-100%);
+}
 </style>
