@@ -34,7 +34,7 @@ export default {
 
 <style>
 form {
-  margin: 25px 50px;
+  margin: 25px 1px;
 }
 
 form .container {
