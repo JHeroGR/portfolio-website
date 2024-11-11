@@ -3,7 +3,7 @@
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img :src="src || 'default.src'" alt="Avatar" style="width: 300px; height: 300px"/>
+          <img :src="src" alt="Avatar" style="width: 300px; height: 300px"/>
         </div>
         <div class="flip-card-back">
           <h1>{{ projectname }}</h1>
@@ -40,18 +40,6 @@ export default {
       default: 'none'
     }
   },
-  methods: {
-    getIcon() {
-      switch (this.worktype) {
-        case 'code':
-          return 'github';
-        case 'design':
-          return 'behance';
-        default:
-          return 'none';
-      }
-    }
-  }
 };
 </script>
 
