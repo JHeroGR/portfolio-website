@@ -10,7 +10,7 @@
               <CardComponent v-if="filterWorkType === 'code' || filterWorkType === 'all'"
                 src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/programming%20languages/ruby.svg"
                 projectname="Ruby Sinatra Starter Project"
-                description="A starter project for Ruby On Sinatra web app projects to introduce programmers to Ruby programming."
+                description="A starter project written in Ruby On Sinatra for programmers."
                 worktype="code"
                 href="https://github.com/JHeroGR/ruby-sinatra-starter-app"
                 />
