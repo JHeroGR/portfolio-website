@@ -18,7 +18,8 @@ import FooterComponent from '@/components/FooterComponent.vue';
 export default {
   name: 'App',
   components: { 
-    NavBarComponent, FooterComponent
+    NavBarComponent, 
+    FooterComponent,
   }
 }
 </script>
@@ -37,7 +38,6 @@ export default {
 }
 
 /* Transitions */
-
 /* Slide transition */
 .slide-enter-active, .slide-leave-active {
   transition: transform 0.5s ease;
@@ -49,4 +49,5 @@ export default {
 .slide-leave {
   transform: translateX(-100%);
 }
+
 </style>

@@ -6,7 +6,7 @@
         <button class='btn btn-success' @click="filterWorkType = 'code'">Code</button>
         <button class="btn btn-danger" @click="filterWorkType = 'game'">Games</button>
         <div class="grid">
-
+          <transition-group name="fade">
               <CardComponent v-if="filterWorkType === 'code' || filterWorkType === 'all'"
                 src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/programming%20languages/ruby.svg"
                 projectname="Ruby Sinatra Starter Project"
@@ -59,7 +59,7 @@
                 />
 
               <CardComponent v-if="filterWorkType === 'all'" />
-
+            </transition-group>
         </div>
       </div>
     </div>
@@ -91,6 +91,16 @@ button {
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr) !important; /* 4 equal columns */
+}
+
+/* Transitions */
+/* Fade */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter, .fade-leave-to /* leave state */ {
+  opacity: 0;
 }
 
 @media only screen and (max-width: 1200px) {
