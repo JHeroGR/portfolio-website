@@ -7,6 +7,7 @@
         </div>
         <div class="flip-card-back">
           <h1>{{ projectname }}</h1>
+          <h4><u>{{ worktype }}</u></h4>
           <p>{{ description }}</p>
           <a :href=href class='btn btn-light' target='_blank'>Go to Project</a>
       </div>
@@ -100,6 +101,10 @@ export default {
     font-size: x-large;
     font-weight: bold;
     margin-top: 5vh;
+}
+
+.flip-card-back h4 {
+  text-transform: uppercase;
 }
 
 .flip-card-back a {

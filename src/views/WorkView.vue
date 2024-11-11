@@ -13,14 +13,15 @@
                 description="A starter project for Ruby On Sinatra web app projects to introduce programmers to Ruby programming."
                 worktype="code"
                 href="https://github.com/JHeroGR/ruby-sinatra-starter-app"
-              />
+                />
 
               <CardComponent v-if="filterWorkType === 'game' || filterWorkType === 'all'"
                 src="https://cdn.worldvectorlogo.com/logos/unity-69.svg"
                 projectname="Epee Fencing Game"
                 description="2D Sword Fighting Game written in C# made in Unity"
                 worktype="game"
-                href="https://github.com/JHeroGR/Epee-Fencing-Game" />
+                href="https://github.com/JHeroGR/Epee-Fencing-Game" 
+                />
 
               <CardComponent v-if="filterWorkType === 'all'" />
 
@@ -30,7 +31,7 @@
                 description="Homework Projects from my Computer Science 2 Class."
                 worktype="code"
                 href="https://github.com/JHeroGR/CS-2-Work"
-              />
+                />
 
               <CardComponent v-if="filterWorkType === 'game' || filterWorkType === 'all'"
                 src="https://cdn.worldvectorlogo.com/logos/unity-69.svg"
@@ -47,7 +48,7 @@
                 description="My Portfolio Version 1 written in VueJS"
                 worktype="code"
                 href="https://github.com/JHeroGR/portfolio-website"
-              />
+                />
 
               <CardComponent v-if="filterWorkType === 'game' || filterWorkType === 'all'"
                 src="https://cdn.worldvectorlogo.com/logos/unity-69.svg"
