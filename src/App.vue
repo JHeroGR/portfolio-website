@@ -1,6 +1,5 @@
 <template>
   <div class="d-flex flex-column min-vh-100">
-  <h1 class='logo'>Joel Gutierrez</h1>
   <NavBarComponent />
     <router-view v-slot="{ Component }">
       <transition name="slide" mode="out-in">

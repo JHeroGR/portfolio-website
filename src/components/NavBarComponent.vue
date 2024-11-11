@@ -1,5 +1,14 @@
 <template lang="">
+    <h1 class='logo'>Joel Gutierrez</h1>
+
     <nav id='desktop-nav'>
+        <router-link to="/">Home</router-link> |
+        <router-link to="/work">Work</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/contact">Contact</router-link>
+    </nav>
+    <nav id='mobile-nav'>
+
         <router-link to="/">Home</router-link> |
         <router-link to="/work">Work</router-link> |
         <router-link to="/about">About</router-link> |
@@ -33,4 +42,17 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 
+#mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #desktop-nav {
+    display: none;
+  }
+  
+  #mobile-nav {
+    display: block;
+  }
+}
 </style>
