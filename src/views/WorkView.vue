@@ -28,6 +28,29 @@
                 href="https://github.com/JHeroGR/portfolio-website"
               />
 
+              <CardComponent
+                src="https://cdn.worldvectorlogo.com/logos/unity-69.svg"
+                projectname="Epee Fencing Game"
+                description="2D Sword Fighting Game written in C# made in Unity"
+                worktype="game"
+                href="https://github.com/JHeroGR/Epee-Fencing-Game" />
+
+              <CardComponent 
+                src="https://cdn.worldvectorlogo.com/logos/unity-69.svg"
+                projectname="Go Home Game"
+                description="2D Survivor Game written in C# made in Unity"
+                worktype="game"
+                href="https://github.com/JHeroGR/Go-Home-Game" />
+
+              <CardComponent
+                src="https://cdn.worldvectorlogo.com/logos/unity-69.svg"
+                projectname="2D Slug Shooter Game"
+                description="2D Shooter Game written in C# made in Unity"
+                worktype="game"
+                href="https://github.com/JHeroGR/2D-Slug-Shooter-Game"
+                />
+                
+              <CardComponent />
               <CardComponent />
               <CardComponent />
 
@@ -52,11 +75,25 @@ export default {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  gap: 16px; /* Space between grid items */
-  padding: 16px;
+  grid-template-columns: repeat(4, 1fr) !important; /* 4 equal columns */
 }
 
+@media only screen and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr) !important; /* 3 columns on medium screens */
+  }
+}
 
+@media only screen and (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 columns on smaller screens */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr !important; /* 1 column on very small screens (mobile) */
+  }
+}
 
 </style>
