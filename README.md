@@ -2,7 +2,7 @@
 
 My Portfolio
 
-Written in VueJS includes a Home, About, Work, and Contact pages.
+Includes a Home, About, Work, and Contact pages.
 
 Written in VueJS using Bootstrap, ParticlesJS, and custom CSS.
 
