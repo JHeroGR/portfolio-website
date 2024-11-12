@@ -1,23 +1,26 @@
 <template>
   <div class="d-flex flex-column min-vh-100">
-  <NavBarComponent />
-    <router-view v-slot="{ Component }">
-      <transition name="slide" mode="out-in">
-        <component :is="Component" />
-      </transition>
-    </router-view>
-  <FooterComponent />
-</div>
+    <ParticlesComponent />
+    <NavBarComponent />
+      <router-view v-slot="{ Component }">
+        <transition name="slide" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    <FooterComponent />
+  </div>
 
 </template>
 
 <script>
+import ParticlesComponent from '@/components/ParticlesComponent.vue';
 import NavBarComponent from '@/components/NavBarComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 
 export default {
   name: 'App',
   components: { 
+    ParticlesComponent,
     NavBarComponent, 
     FooterComponent,
   }
