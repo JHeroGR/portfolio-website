@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+
     <vue-particles id="tsparticles" @particles-loaded="particlesLoaded" />
 
     <vue-particles
@@ -92,7 +92,6 @@
         detectRetina: true,
       }"
     />
-  </div>
 </template>
 
 <script>

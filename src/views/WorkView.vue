@@ -1,68 +1,30 @@
-<template lang="">
+<template>
 
-    <div class="work">
-      <div class="container">
-        <button class='btn btn-primary' @click="filterWorkType = 'all'">Everything</button>
-        <button class='btn btn-success' @click="filterWorkType = 'code'">Code</button>
-        <button class="btn btn-danger" @click="filterWorkType = 'game'">Games</button>
-        <div class="grid">
-          <transition-group name="fade">
-              <CardComponent v-if="filterWorkType === 'code' || filterWorkType === 'all'"
-                src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/programming%20languages/ruby.svg"
-                projectname="Ruby Sinatra Starter Project"
-                description="A starter project written in Ruby On Sinatra for programmers."
-                worktype="code"
-                href="https://github.com/JHeroGR/ruby-sinatra-starter-app"
-                />
+  <div class="work">
+    <div class="container">
+      <button 
+        v-for="filter in filters" 
+        :key="filter.id" 
+        :class="[filter.buttontype, { active: filterWorkType === filter.filterWorkType }]"          
+        @click="filterWorktype(filter.filterWorkType)">
+        {{ filter.name }}
+      </button>
 
-              <CardComponent v-if="filterWorkType === 'game' || filterWorkType === 'all'"
-                src="https://cdn.worldvectorlogo.com/logos/unity-69.svg"
-                projectname="Epee Fencing Game"
-                description="2D Sword Fighting Game written in C# made in Unity"
-                worktype="game"
-                href="https://github.com/JHeroGR/Epee-Fencing-Game" 
-                />
-
-              <CardComponent v-if="filterWorkType === 'all'" />
-
-              <CardComponent v-if="filterWorkType === 'code' || filterWorkType === 'all'"
-                src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/programming%20languages/c++.svg"
-                projectname="CS 2 Work"
-                description="Homework Projects from my Computer Science 2 Class."
-                worktype="code"
-                href="https://github.com/JHeroGR/CS-2-Work"
-                />
-
-              <CardComponent v-if="filterWorkType === 'game' || filterWorkType === 'all'"
-                src="https://cdn.worldvectorlogo.com/logos/unity-69.svg"
-                projectname="Go Home Game"
-                description="2D Survivor Game written in C# made in Unity"
-                worktype="game"
-                href="https://github.com/JHeroGR/Go-Home-Game" />
-
-              <CardComponent v-if="filterWorkType === 'all'" />
-
-              <CardComponent v-if="filterWorkType === 'code' || filterWorkType === 'all'"
-                src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/frameworks/vuejs.svg"
-                projectname="Portfolio Website in VueJS"
-                description="My Portfolio Version 1 written in VueJS"
-                worktype="code"
-                href="https://github.com/JHeroGR/portfolio-website"
-                />
-
-              <CardComponent v-if="filterWorkType === 'game' || filterWorkType === 'all'"
-                src="https://cdn.worldvectorlogo.com/logos/unity-69.svg"
-                projectname="2D Slug Shooter Game"
-                description="2D Shooter Game written in C# made in Unity"
-                worktype="game"
-                href="https://github.com/JHeroGR/2D-Slug-Shooter-Game"
-                />
-
-              <CardComponent v-if="filterWorkType === 'all'" />
-            </transition-group>
-        </div>
+      <div class="grid">
+        <transition-group name="fade">
+          <div v-for="card in card_data" :key="card.id" v-show="filterWorkType === 'all' || card.worktype === filterWorkType">
+            <CardComponent 
+              :src="card.src"
+              :projectname="card.projectname"
+              :description="card.description" 
+              :worktype="card.worktype"
+              :href="card.href"
+            />
+          </div>
+        </transition-group>
       </div>
     </div>
+  </div>
 
 </template>
 
@@ -76,9 +38,85 @@ export default {
   },
   data() {
     return {
-      filterWorkType: 'all'
+      filterWorkType: 'all',  // Initial filter type
+      filters: [
+        { id: 1, name: 'Everything', filterWorkType: 'all', buttontype: 'btn btn-outline-secondary' },
+        { id: 2, name: 'Code', filterWorkType: 'code', buttontype: 'btn btn-outline-success' },
+        { id: 3, name: 'Game', filterWorkType: 'game', buttontype: 'btn btn-outline-danger' },
+        { id: 4, name: 'Art', filterWorkType: 'art', buttontype: 'btn btn-outline-primary' }
+      ],
+      card_data: [
+        { 
+          id: 0,
+          filterWorkType: 'game', 
+          src: "https://cdn.worldvectorlogo.com/logos/unity-69.svg",
+          projectname: "2D Slug Shooter Game",
+          description: "2D Shooter Game written in C# made in Unity",
+          worktype: "game",
+          href: "https://github.com/JHeroGR/2D-Slug-Shooter-Game" 
+        },
+        {
+          id: 1,
+          filterWorkType: 'code',
+          src: "https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/programming%20languages/ruby.svg",
+          projectname: "Ruby Sinatra Starter Project",
+          description: "A starter project written in Ruby On Sinatra for programmers.",
+          worktype: "code",
+          href: "https://github.com/JHeroGR/ruby-sinatra-starter-app",
+        },
+        {
+          id: 2,
+          filterWorkType: 'art',
+          src: require("@/assets/PillowThinkers Logo.png"),
+          projectname: 'Pillow Thinkers Logo',
+          description: "Logo Design for Pillow Thinkers Youtube-Twitch Podcast Channel",
+          worktype: "art",
+          href: "https://www.behance.net/gallery/203207257/Pillow-Thinkers-Designs-(Logo-Background-Banner)"
+        },
+        {
+          id: 3,
+          filterWorkType: "game",
+          src: "https://cdn.worldvectorlogo.com/logos/unity-69.svg",
+          projectname: "Epee Fencing Game",
+          description: "2D Sword Fighting Game written in C# made in Unity",
+          worktype: "game",
+          href: "https://github.com/JHeroGR/Epee-Fencing-Game" 
+        },
+        {
+          id: 4,
+          filterWorkType: 'code',
+          src: "https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/programming%20languages/c++.svg",
+          projectname: "CS 2 Work",
+          description: "Homework Projects from my Computer Science 2 Class.",
+          worktype: "code",
+          href: "https://github.com/JHeroGR/CS-2-Work"        
+        },
+        {
+          id: 5,
+          filterWorkType: 'game',
+          src: "https://cdn.worldvectorlogo.com/logos/unity-69.svg",
+          projectname: "Go Home Game",
+          description: "2D Survivor Game written in C# made in Unity",
+          worktype: "game",
+          href: "https://github.com/JHeroGR/Go-Home-Game"
+        },
+        {
+          id: 6,
+          filterWorkType: 'code',
+          src: "https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/frameworks/vuejs.svg",
+          projectname: "Portfolio Website in VueJS",
+          description: "My Portfolio Version 1 written in VueJS",
+          worktype: "code",
+          href: "https://github.com/JHeroGR/portfolio-website"
+        }
+      ]
     }
   },
+  methods: {
+    filterWorktype(selectedFilter) {
+      this.filterWorkType = selectedFilter; // Set the global filter type
+    }
+  }
 };
 </script>
 
@@ -93,32 +131,29 @@ button {
   grid-template-columns: repeat(4, 1fr) !important; /* 4 equal columns */
 }
 
-/* Transitions */
-/* Fade */
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s ease;
 }
 
-.fade-enter, .fade-leave-to /* leave state */ {
+.fade-enter, .fade-leave-to {
   opacity: 0;
 }
 
 @media only screen and (max-width: 1200px) {
   .grid {
-    grid-template-columns: repeat(3, 1fr) !important; /* 3 columns on medium screens */
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
 @media only screen and (max-width: 900px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr) !important; /* 2 columns on smaller screens */
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .grid {
-    grid-template-columns: 1fr !important; /* 1 column on very small screens (mobile) */
+    grid-template-columns: 1fr !important;
   }
 }
-
 </style>

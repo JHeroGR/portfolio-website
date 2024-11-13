@@ -1,6 +1,6 @@
 <template lang="">
   <div class="d-inline-block mx-3">
-    <div class="flip-card">
+    <div :id=worktype class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <img :src="src" alt="Avatar" style="width: 300px; height: 300px"/>
@@ -89,6 +89,18 @@ export default {
   background-color: #42b983;
   color: white;
   transform: rotateY(180deg);
+}
+
+#game .flip-card-back {
+  background-color: #dc3545;
+}
+
+#code .flip-card-back {
+  background-color: #198754;
+}
+
+#art .flip-card-back {
+  background-color: #0d6efd;
 }
 
 .flip-card-back h1,
