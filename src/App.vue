@@ -1,6 +1,7 @@
 <template>
   <div class="d-flex flex-column min-vh-100">
     <ParticlesComponent />
+    <!-- <DarkModeComponent /> -->
     <NavBarComponent />
       <router-view v-slot="{ Component }">
         <transition name="slide" mode="out-in">
@@ -16,6 +17,7 @@
 import ParticlesComponent from '@/components/ParticlesComponent.vue';
 import NavBarComponent from '@/components/NavBarComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
+import DarkModeComponent from '@/components/DarkModeComponent.vue';
 
 export default {
   name: 'App',
@@ -23,6 +25,7 @@ export default {
     ParticlesComponent,
     NavBarComponent, 
     FooterComponent,
+    DarkModeComponent
   }
 }
 </script>
@@ -53,4 +56,8 @@ export default {
   transform: translateX(-100%);
 }
 
+.dark {
+  background: #16171d; /*it's better to use a dark grey color instead of pure black */
+  color: #fff;
+}
 </style>
