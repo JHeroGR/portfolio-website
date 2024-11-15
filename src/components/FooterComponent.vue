@@ -71,7 +71,7 @@ export default {
 
 <style>
 footer {
-  background-color: #34495e;
+  background-color: #353935;
   color: white;
   font-size: large;
   font-weight: bolder;

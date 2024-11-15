@@ -1,6 +1,6 @@
 <template lang="">
     <form>
-      <div class="bg-white border rounded shadow-sm overflow-hidden">
+      <div class="border border-secondary rounded shadow-lg p-3 mb-5 rounded overflow-hidden">
         <div class="container">
           <div class="row">
             <div class="col">

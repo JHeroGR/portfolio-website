@@ -9,7 +9,7 @@ html {
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: transparent;
+    opacity: 1;
   }
   
   /* Handle */

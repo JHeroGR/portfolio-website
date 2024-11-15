@@ -6,9 +6,9 @@
         <div class="col-6">
           <h2>Let's Work Together</h2>
           
-          <p>I am always interested in working on a project.</p>
-          <p>Feel free to fill out the contact form with your project proposition or job offer and I will get back to you asap.</p>
-          <p>Feel free to send me a message on LinkedIn too! </p>
+          <h4>I am always interested in working on a project.</h4>
+          <h4>Feel free to fill out the contact form with your project proposition or job offer and I will get back to you asap.</h4>
+          <h4>Feel free to send me a message on LinkedIn too! </h4>
         </div>
         <div class="col-6">
           <FormComponent />
@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style>
-.col-6 p {
+.col-6 h4 {
   text-align: left;
   padding-top: 1rem;
 }
@@ -41,7 +41,7 @@ export default {
     width: auto;
   }
 
-  .col-6 p {
+  .col-6 h4 {
     text-align: center;
   }
 }

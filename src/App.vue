@@ -17,7 +17,6 @@
 import ParticlesComponent from '@/components/ParticlesComponent.vue';
 import NavBarComponent from '@/components/NavBarComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
-import DarkModeComponent from '@/components/DarkModeComponent.vue';
 
 export default {
   name: 'App',
@@ -25,7 +24,6 @@ export default {
     ParticlesComponent,
     NavBarComponent, 
     FooterComponent,
-    DarkModeComponent
   }
 }
 </script>

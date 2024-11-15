@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    <p>I am Joel Gutierrez, I am a coder, developer, and designer. Take a look at my <router-link to="/work">work</router-link> and <router-link to="/contact">contact</router-link> me for an interview or job.</p>
+    <h1>I am Joel Gutierrez</h1> 
+    <h1>I am a coder, developer, and designer. </h1>
+    <h1>Take a look at my <router-link to="/work">work</router-link> and <router-link to="/contact">contact</router-link> me for an interview or job.</h1>
   </div>
 </template>
 
@@ -28,5 +30,10 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.hello h1 {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 </style>
