@@ -35,6 +35,8 @@ export default {
 <style>
 form {
   margin: 25px 1px;
+  backdrop-filter: invert(80%);
+  border-radius: 5px;
 }
 
 form .container {
