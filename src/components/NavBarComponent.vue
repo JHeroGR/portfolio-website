@@ -1,5 +1,5 @@
 <template lang="">
-    <h1 class='logo'>Joel Gutierrez</h1>
+    <h1 class='h1'>Joel Gutierrez</h1>
 
     <nav id='desktop-nav'>
         <router-link to="/">Home</router-link> |
@@ -8,7 +8,6 @@
         <router-link to="/contact">Contact</router-link>
     </nav>
     <nav id='mobile-nav'>
-
         <router-link to="/">Home</router-link> |
         <router-link to="/work">Work</router-link> |
         <router-link to="/about">About</router-link> |
@@ -23,14 +22,9 @@ export default {
 </script>
 
 <style>
-    
 nav {
   padding: 30px;
   font-size: larger;
-}
-
-nav .logo {
-    font-weight: bold;
 }
 
 nav a {

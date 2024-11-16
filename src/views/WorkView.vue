@@ -49,7 +49,7 @@ export default {
         { 
           id: 0,
           filterWorkType: 'game', 
-          src: "https://cdn.worldvectorlogo.com/logos/unity-69.svg",
+          src: require('@/assets/2D Slug Shooter.png'),
           projectname: "2D Slug Shooter Game",
           description: "2D Shooter Game written in C# made in Unity",
           worktype: "game",
@@ -76,7 +76,7 @@ export default {
         {
           id: 3,
           filterWorkType: "game",
-          src: "https://cdn.worldvectorlogo.com/logos/unity-69.svg",
+          src: require('@/assets/Epee Fencing.png'),
           projectname: "Epee Fencing Game",
           description: "2D Sword Fighting Game written in C# made in Unity",
           worktype: "game",
@@ -94,7 +94,7 @@ export default {
         {
           id: 5,
           filterWorkType: 'game',
-          src: "https://cdn.worldvectorlogo.com/logos/unity-69.svg",
+          src: require('@/assets/Go Home.png'),
           projectname: "Go Home Game",
           description: "2D Survivor Game written in C# made in Unity",
           worktype: "game",
@@ -122,8 +122,8 @@ export default {
 
 <style>
 button {
-  margin: 10px;
-  margin-bottom: 25px;
+  margin: 5px;
+  margin-bottom: 20px;
 }
 
 .grid {

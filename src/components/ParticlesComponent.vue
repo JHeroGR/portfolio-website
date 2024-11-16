@@ -8,7 +8,7 @@
       :options="{
         background: {
           color: {
-            value: '#F3E5AB',
+            value: '#F9F4F5',
           },
         },
         fpsLimit: 120,
