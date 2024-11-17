@@ -49,7 +49,7 @@ export default {
         { 
           id: 0,
           filterWorkType: 'game', 
-          src: require('@/assets/2D Slug Shooter.png'),
+          src: require('@/assets/game/2D Slug Shooter.png'),
           projectname: "2D Slug Shooter Game",
           description: "2D Shooter Game written in C# made in Unity",
           worktype: "game",
@@ -67,7 +67,7 @@ export default {
         {
           id: 2,
           filterWorkType: 'art',
-          src: require("@/assets/PillowThinkers Logo.png"),
+          src: require("@/assets/art/PillowThinkers Logo SUB ICON.png"),
           projectname: 'Pillow Thinkers Logo',
           description: "Logo Design for Pillow Thinkers Youtube-Twitch Podcast Channel",
           worktype: "art",
@@ -76,7 +76,7 @@ export default {
         {
           id: 3,
           filterWorkType: "game",
-          src: require('@/assets/Epee Fencing.png'),
+          src: require('@/assets/game/Epee Fencing.png'),
           projectname: "Epee Fencing Game",
           description: "2D Sword Fighting Game written in C# made in Unity",
           worktype: "game",
@@ -94,7 +94,7 @@ export default {
         {
           id: 5,
           filterWorkType: 'game',
-          src: require('@/assets/Go Home.png'),
+          src: require('@/assets/game/Go Home.png'),
           projectname: "Go Home Game",
           description: "2D Survivor Game written in C# made in Unity",
           worktype: "game",
@@ -108,7 +108,63 @@ export default {
           description: "My Portfolio Version 1 written in VueJS",
           worktype: "code",
           href: "https://github.com/JHeroGR/portfolio-website"
-        }
+        },
+        {
+          id: 7,
+          filterWorkType: 'art',
+          src: require('@/assets/art/BEEP.png'),
+          projectname: 'BEEP Emoji',
+          description: 'Beep Emoji for streamers',
+          worktype: 'art',
+          href: '#'
+        },
+        {
+          id: 8,
+          filterWorkType: 'art',
+          src: require('@/assets/art/GGs.png'),
+          projectname: 'GGs Emoji',
+          description: 'GGs Emoji for streamers',
+          worktype: 'art',
+          href: '#'
+        },
+        {
+          id: 9,
+          filterWorkType: 'art',
+          src: require('@/assets/art/GoodLuckHaveFun.png'),
+          projectname: 'GoodLuckHaveFun Emoji',
+          description: 'GoodLuckHaveFun Emoji for streamers',
+          worktype: 'art',
+          href: '#'
+        },
+        {
+          id: 10,
+          filterWorkType: 'art',
+          src: require('@/assets/art/Hype.png'),
+          projectname: 'Hype Emoji',
+          description: 'Hype Emoji for streamers',
+          worktype: 'art',
+          href: '#'
+        },
+        {
+          id: 11,
+          filterWorkType: 'art',
+          src: require('@/assets/art/LetsGO.png'),
+          projectname: 'LetsGO Emoji',
+          description: 'LetsGO Emoji for streamers',
+          worktype: 'art',
+          href: '#'
+        },
+        {
+          id: 11,
+          filterWorkType: 'art',
+          src: require('@/assets/art/NTs.png'),
+          projectname: 'NTs Emoji',
+          description: 'NTs Emoji for streamers',
+          worktype: 'art',
+          href: '#'
+        },
+
+
       ]
     }
   },

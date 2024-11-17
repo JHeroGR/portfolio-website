@@ -9,13 +9,25 @@
 <script setup>
 import { useDark, useToggle } from "@vueuse/core";
 
-const isDark = useDark();
+const isDark = useDark({
+  selector: 'body',
+  valueDark: 'dark',
+  valueLight: 'light'
+});
 const toggleDark = useToggle(isDark);
+
 </script>
 
 <style>
 .dark {
-  background: #16171d; 
+  background: #353839; 
   color: #fff;
 }
+
+.light {
+  background: #F9F4F5;
+  color: #353839;
+}
+
+/* isDark ? '#fff' : '#353839' */
 </style>

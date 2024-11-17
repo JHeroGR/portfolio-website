@@ -1,15 +1,11 @@
 <template>
 
-    <vue-particles id="tsparticles" @particles-loaded="particlesLoaded" />
-
     <vue-particles
       id="tsparticles"
       @particles-loaded="particlesLoaded"
       :options="{
         background: {
-          color: {
-            value: '#F9F4F5',
-          },
+          color: 'isDark',
         },
         fpsLimit: 120,
         interactivity: {
@@ -55,9 +51,7 @@
           },
         },
         particles: {
-          color: {
-            value: '#000',
-          },
+          color: '#000',
           links: {
             color: '#000',
             distance: 150,
