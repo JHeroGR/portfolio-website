@@ -71,14 +71,12 @@ export default {
 
 <style>
 footer {
-  background-color: #353935;
-  color: white;
   font-size: large;
   font-weight: bolder;
 }
 
 footer a {
-  color: white;
+  color: inherit;
   text-decoration: none;
   margin-right: 10px;
 }

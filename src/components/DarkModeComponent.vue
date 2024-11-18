@@ -21,7 +21,7 @@ const toggleDark = useToggle(isDark);
 <style>
 .dark {
   background: #353839; 
-  color: #fff;
+  color: #F9F4F5;
 }
 
 .light {

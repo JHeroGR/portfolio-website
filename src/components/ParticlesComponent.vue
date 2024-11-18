@@ -3,7 +3,21 @@
     <vue-particles
       id="tsparticles"
       @particles-loaded="particlesLoaded"
-      :options="{
+      :options="particlesOptions"
+    />
+</template>
+
+<script>
+import "@tsparticles/vue3";
+
+export default {
+  name: "ParticlesComponent",
+  data() {
+    return {
+      particlesLoaded: async (container) => {
+        console.log("Particles container loaded", container);
+      },
+      particlesOptions: {
         background: {
           color: 'isDark',
         },
@@ -84,19 +98,6 @@
           },
         },
         detectRetina: true,
-      }"
-    />
-</template>
-
-<script>
-import "@tsparticles/vue3";
-
-export default {
-  name: "ParticlesComponent",
-  data() {
-    return {
-      particlesLoaded: async (container) => {
-        console.log("Particles container loaded", container);
       },
     }
   },
