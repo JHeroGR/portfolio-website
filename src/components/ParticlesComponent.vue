@@ -1,105 +1,103 @@
 <template>
-
+  <div>
+    <button @click="changeTheme('dark')">Dark Theme</button>
+    <button @click="changeTheme('light')">Light Theme</button>
     <vue-particles
+      :key="particlesKey"
       id="tsparticles"
       @particles-loaded="particlesLoaded"
-      :options="particlesOptions"
+      :options="currentParticlesOptions"
     />
+  </div>
 </template>
 
 <script>
-import "@tsparticles/vue3";
+import { ref, onMounted } from "vue";
 
 export default {
   name: "ParticlesComponent",
-  data() {
-    return {
-      particlesLoaded: async (container) => {
-        console.log("Particles container loaded", container);
-      },
-      particlesOptions: {
-        background: {
-          color: 'isDark',
-        },
+  setup() {
+    const darkParticlesOptions = ref({});
+    const lightParticlesOptions = ref({});
+    const currentParticlesOptions = ref({});
+    const particlesKey = ref(0); // Used to force re-render
+
+    const particlesLoaded = async (container) => {
+      console.log("Particles container loaded", container);
+    };
+
+    const changeTheme = (theme) => {
+      switch (theme) {
+        case "light":
+          currentParticlesOptions.value = { ...lightParticlesOptions.value };
+          break;
+        case "dark":
+          currentParticlesOptions.value = { ...darkParticlesOptions.value };
+          break;
+        default:
+          currentParticlesOptions.value = { ...lightParticlesOptions.value };
+          break;
+      }
+      particlesKey.value++; // Increment key to force re-render
+    };
+
+    onMounted(() => {
+      lightParticlesOptions.value = {
+        background: { color: { value: "#cac7c6" } },
         fpsLimit: 120,
         interactivity: {
           events: {
-            onClick: {
-              enable: true,
-              mode: 'push',
-            },
-            onDiv: {
-              selectors: {},
-              enable: false,
-              mode: {},
-              type: 'circle',
-            },
-            onHover: {
-              enable: true,
-              mode: 'grab',
-              parallax: {
-                enable: true,
-                force: 60,
-                smooth: 10,
-              },
-            },
-            resize: {
-              delay: 0.5,
-              enable: true,
-            },
+            onClick: { enable: true, mode: "push" },
+            onHover: { enable: true, mode: "repulse" },
           },
           modes: {
-            bubble: {
-              distance: 400,
-              duration: 2,
-              opacity: 0.8,
-              size: 40,
-            },
-            push: {
-              quantity: 2,
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.4,
-            },
+            bubble: { distance: 400, duration: 2, opacity: 0.8, size: 40 },
+            push: { quantity: 4 },
+            repulse: { distance: 200, duration: 0.4 },
           },
         },
         particles: {
-          color: '#000',
-          links: {
-            color: '#000',
-            distance: 150,
-            enable: true,
-            opacity: 0,
-            width: 1,
-          },
-          move: {
-            direction: 'none',
-            enable: true,
-            outModes: 'bounce',
-            random: false,
-            speed: 6,
-            straight: false,
-          },
-          number: {
-            density: {
-              enable: true,
-            },
-            value: 80,
-          },
-          opacity: {
-            value: 0.5,
-          },
-          shape: {
-            type: 'circle',
-          },
-          size: {
-            value: { min: 1, max: 5 },
-          },
+          color: { value: "#353839" },
+          links: { color: "#353839", distance: 150, enable: true, opacity: 0.5, width: 1 },
+          move: { direction: "none", enable: true, outModes: "bounce", speed: 6 },
+          number: { density: { enable: true }, value: 80 },
+          opacity: { value: 0.5 },
+          shape: { type: "circle" },
+          size: { value: { min: 1, max: 5 } },
         },
         detectRetina: true,
-      },
-    }
+      };
+
+      darkParticlesOptions.value = {
+        background: { color: { value: "#353839" } },
+        fpsLimit: 120,
+        interactivity: {
+          events: {
+            onClick: { enable: true, mode: "push" },
+            onHover: { enable: true, mode: "repulse" },
+          },
+          modes: {
+            bubble: { distance: 400, duration: 2, opacity: 0.8, size: 40 },
+            push: { quantity: 4 },
+            repulse: { distance: 200, duration: 0.4 },
+          },
+        },
+        particles: {
+          color: { value: "#cac7c6" },
+          links: { color: "#cac7c6", distance: 150, enable: true, opacity: 0.5, width: 1 },
+          move: { direction: "none", enable: true, outModes: "bounce", speed: 6 },
+          number: { density: { enable: true }, value: 80 },
+          opacity: { value: 0.5 },
+          shape: { type: "circle" },
+          size: { value: { min: 1, max: 5 } },
+        },
+        detectRetina: true,
+      };
+
+      currentParticlesOptions.value = { ...lightParticlesOptions.value }; // Default
+    });
+
+    return { particlesKey, currentParticlesOptions, particlesLoaded, changeTheme };
   },
 };
 </script>
