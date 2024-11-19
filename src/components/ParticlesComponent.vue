@@ -30,9 +30,12 @@ export default {
       switch (theme) {
         case "light":
           currentParticlesOptions.value = { ...lightParticlesOptions.value };
+          document.getElementById('app').setAttribute('style', 'color: #353839')
           break;
         case "dark":
           currentParticlesOptions.value = { ...darkParticlesOptions.value };
+          document.getElementById('app').setAttribute('style', 'color: #cac7c6')
+
           break;
         default:
           currentParticlesOptions.value = { ...lightParticlesOptions.value };
@@ -95,6 +98,7 @@ export default {
       };
 
       currentParticlesOptions.value = { ...lightParticlesOptions.value }; // Default
+      document.getElementById('app').setAttribute('style', 'color: #353839')
     });
 
     return { particlesKey, currentParticlesOptions, particlesLoaded, changeTheme };
