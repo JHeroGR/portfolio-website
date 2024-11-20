@@ -35,7 +35,10 @@ nav a {
 
 nav a.router-link-exact-active {
   text-decoration: underline;
-  color: #42b983;
+  text-decoration-color: #006538;
+    color: #42b983;
+    -webkit-text-stroke: 0.5px #00361e;
+
 }
 
 #mobile-nav {

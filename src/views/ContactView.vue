@@ -13,10 +13,10 @@
       <div class="row">
         <h2>Contact Info</h2>
           <h4>
-            <i class="bi bi-envelope-at-fill"></i>Mail:<a href="mailto:jheroytc@gmail.com">jheroytc@gmail.com</a>
+            <i class="bi bi-envelope-at-fill"></i> Mail: <a href="mailto:jheroytc@gmail.com">jheroytc@gmail.com</a>
           </h4>
           <h4>
-            <i class="bi bi-linkedin"></i>LinkedIn:<a href="https://linkedin.com/joel-gutierrez-cmpe">Here</a>
+            <i class="bi bi-linkedin"></i> LinkedIn: <a href="https://linkedin.com/joel-gutierrez-cmpe">Here</a>
           </h4>
       </div>
     </div>
@@ -24,26 +24,23 @@
 </template>
 
 <script>
-// import FormComponent from '@/components/FormComponent.vue';
 
 export default {
   name: "ContactView",
-  components: {
-    // FormComponent
-  },
 };
 </script>
 
 <style>
 
-a {
-  text-decoration: none;
-  color: inherit;
+.contact a {
+  text-decoration: underline;
+  text-decoration-color: #006538;
+  color: #42b983;
+  -webkit-text-stroke: 0.5px #00361e;
 }
 
 .row {
   margin-bottom: 25px;
 }
-
 
 </style>

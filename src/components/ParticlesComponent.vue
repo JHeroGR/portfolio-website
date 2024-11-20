@@ -49,6 +49,7 @@ export default {
           currentParticlesOptions.value = { ...lightParticlesOptions.value };
           break;
       }
+
       particlesKey.value++; // Increment key to force re-render
     };
 
@@ -59,17 +60,15 @@ export default {
 
     onMounted(() => {
       lightParticlesOptions.value = {
-        background: { color: { value: "#cac7c6" } },
+        background: { color: { value: "#fafafa" } },
         fpsLimit: 120,
         interactivity: {
           events: {
             onClick: { enable: true, mode: "push" },
-            onHover: { enable: true, mode: "repulse" },
+            onHover: { enable: true, mode: "grab" },
           },
           modes: {
-            bubble: { distance: 400, duration: 2, opacity: 0.8, size: 40 },
             push: { quantity: 4 },
-            repulse: { distance: 200, duration: 0.4 },
           },
         },
         particles: {
@@ -104,15 +103,14 @@ export default {
             onHover: { enable: true, mode: "repulse" },
           },
           modes: {
-            bubble: { distance: 400, duration: 2, opacity: 0.8, size: 40 },
-            push: { quantity: 4 },
-            repulse: { distance: 200, duration: 0.4 },
+            push: { quantity: 10 },
+            repulse: { distance: 100, duration: 0.4 },
           },
         },
         particles: {
-          color: { value: "#cac7c6" },
+          color: { value: "#fafafa" },
           links: {
-            color: "#cac7c6",
+            color: "#fafafa",
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -132,7 +130,8 @@ export default {
         detectRetina: true,
       };
 
-      currentParticlesOptions.value = { ...lightParticlesOptions.value }; // Default
+      // Default
+      currentParticlesOptions.value = { ...lightParticlesOptions.value }; 
       document.getElementById("app").setAttribute("style", "color: #353839");
     });
 

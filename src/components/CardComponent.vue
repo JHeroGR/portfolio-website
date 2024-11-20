@@ -80,7 +80,7 @@ export default {
 }
 
 .flip-card-front {
-  background: #bbb;
+  background: #808080;
   color: black;
   box-shadow: black;
 }
