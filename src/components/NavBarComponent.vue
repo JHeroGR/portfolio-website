@@ -34,6 +34,7 @@ nav a {
 }
 
 nav a.router-link-exact-active {
+  text-decoration: underline;
   color: #42b983;
 }
 

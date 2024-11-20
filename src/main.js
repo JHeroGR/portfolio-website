@@ -7,6 +7,7 @@ import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSl
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 createApp(App).use(router).use(Particles, {
     init: async engine => {
