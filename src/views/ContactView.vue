@@ -13,10 +13,10 @@
       <div class="row">
         <h2>Contact Info</h2>
           <h4>
-            <i class="bi bi-envelope-at-fill"></i> Mail: <a href="mailto:jheroytc@gmail.com">jheroytc@gmail.com</a>
+            <i class="bi bi-envelope-at-fill"></i> Mail: <a href="mailto:jheroytc@gmail.com">Here</a>
           </h4>
           <h4>
-            <i class="bi bi-linkedin"></i> LinkedIn: <a href="https://linkedin.com/joel-gutierrez-cmpe">Here</a>
+            <i class="bi bi-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/joel-gutierrez-cmpe">Here</a>
           </h4>
       </div>
     </div>
