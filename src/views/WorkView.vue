@@ -103,9 +103,9 @@ export default {
         {
           id: 6,
           filterWorkType: 'code',
-          src: "https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/frameworks/vuejs.svg",
+          src: require('@/assets/code/portfolio-website-image.png'),
           projectname: "Portfolio Website in VueJS",
-          description: "My Portfolio Version 1 written in VueJS",
+          description: "My Portfolio written in VueJS",
           worktype: "code",
           href: "https://github.com/JHeroGR/portfolio-website"
         },
