@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <footer class="mt-auto">
     <div class="footer">
       <div class="row g-0">

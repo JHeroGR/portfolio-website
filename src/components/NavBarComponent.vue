@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <h1 class='h1'>Joel Gutierrez</h1>
 
     <nav id='desktop-nav'>

@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <div class="d-inline-block mx-3">
     <div :id=worktype class="flip-card">
       <div class="flip-card-inner">
