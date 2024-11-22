@@ -3,7 +3,7 @@
     <div :id=worktype class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img :src="src" alt="Avatar" style="width: 300px; height: 300px"/>
+          <img :src="src" alt="Avatar"/>
         </div>
         <div class="flip-card-back">
           <h1>{{ projectname }}</h1>
@@ -124,8 +124,7 @@ export default {
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 300px; height: 300px; object-fit: cover;
 }
 
 @media only screen and (max-width:600px) {
