@@ -163,7 +163,15 @@ export default {
           worktype: 'art',
           href: '#'
         },
-
+        {
+          id: 12,
+          filterWorkType: 'art',
+          src: require('@/assets/art/TPC-LAN-SSBU-NOV-2024-Tournament-Flyer.png'),
+          projectname: 'Texas Prospect Cup SSBU LAN Tournament',
+          description: 'Gaming Tournament Flyer',
+          worktype: 'art',
+          href: '#'
+        }
 
       ]
     }
