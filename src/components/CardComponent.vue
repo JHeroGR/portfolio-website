@@ -63,7 +63,7 @@ export default {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(128, 128, 128, 1);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -82,7 +82,6 @@ export default {
 .flip-card-front {
   background: #808080;
   color: black;
-  box-shadow: black;
 }
 
 .flip-card-back {
