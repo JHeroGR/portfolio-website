@@ -171,6 +171,15 @@ export default {
           description: 'Gaming Tournament Flyer',
           worktype: 'art',
           href: '#'
+        },
+        {
+          id: 13,
+          filterWorkType: 'art',
+          src: require('@/assets/art/TPC-LAN-Tournament-Playoffs-Graphics.png'),
+          projectname: 'Texas Prospect Cup Playoffs Graphics',
+          description: 'Gaming Tournament Playoffs Flyer',
+          worktype: 'art',
+          href: '#'
         }
 
       ]
