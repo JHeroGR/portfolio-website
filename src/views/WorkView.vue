@@ -42,7 +42,8 @@ export default {
         { id: 1, name: 'Everything', filterWorkType: 'all', buttontype: 'btn btn-outline-secondary' },
         { id: 2, name: 'Code', filterWorkType: 'code', buttontype: 'btn btn-outline-success' },
         { id: 3, name: 'Game', filterWorkType: 'game', buttontype: 'btn btn-outline-danger' },
-        { id: 4, name: 'Art', filterWorkType: 'art', buttontype: 'btn btn-outline-primary' }
+        { id: 4, name: 'Art', filterWorkType: 'art', buttontype: 'btn btn-outline-primary' },
+        { id: 5, name: 'Design', filterWorkType: 'design', buttontype: 'btn btn-outline-info' },
       ],
       card_data: [
         { 
@@ -164,20 +165,20 @@ export default {
         },
         {
           id: 12,
-          filterWorkType: 'art',
-          src: require('@/assets/art/TPC-LAN-SSBU-NOV-2024-Tournament-Flyer.png'),
+          filterWorkType: 'design',
+          src: require('@/assets/design/TPC-LAN-SSBU-NOV-2024-Tournament-Flyer.png'),
           projectname: 'Texas Prospect Cup SSBU LAN Tournament',
           description: 'Gaming Tournament Flyer',
-          worktype: 'art',
+          worktype: 'design',
           href: '#'
         },
         {
           id: 13,
-          filterWorkType: 'art',
-          src: require('@/assets/art/TPC-LAN-Tournament-Playoffs-Graphics.png'),
+          filterWorkType: 'design',
+          src: require('@/assets/design/TPC-LAN-Tournament-Playoffs-Graphics.png'),
           projectname: 'Texas Prospect Cup Playoffs Graphics',
           description: 'Gaming Tournament Playoffs Flyer',
-          worktype: 'art',
+          worktype: 'design',
           href: '#'
         }
 

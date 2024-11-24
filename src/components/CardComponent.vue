@@ -102,6 +102,10 @@ export default {
   background-color: #0d6efd;
 }
 
+#design .flip-card-back {
+  background-color: #17a2b8;
+}
+
 .flip-card-back h1,
 .flip-card-back p {
   margin-left: 15px;
