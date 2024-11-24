@@ -10,7 +10,7 @@
       </button>
 
       <div class="grid">
-        <transition-group name="fade">
+        <transition-group name="list">
           <div v-for="card in card_data" :key="card.id" v-show="filterWorkType === 'all' || card.worktype === filterWorkType">
             <CardComponent 
               :src="card.src"
@@ -203,12 +203,27 @@ button {
   grid-template-columns: repeat(4, 1fr) !important; /* 4 equal columns */
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 1s ease;
+/* apply transition to moving elements */
+.list-move,
+.list-enter-active {
+  transition: all 0.5s ease-in;
 }
 
-.fade-enter, .fade-leave-to {
+.list-move,
+.list-leave-active {
+  transition: all 0.5s ease-out;
+}
+
+.list-enter-from,
+.list-leave-to {
   opacity: 0;
+  transform: translateY(50px);
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.list-leave-active {
+  position: absolute;
 }
 
 @media only screen and (max-width: 1200px) {
