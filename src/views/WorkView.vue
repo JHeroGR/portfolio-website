@@ -11,7 +11,15 @@
 
       <div class="grid">
         <transition-group name="list">
-          <div v-for="card in card_data" :key="card.id" v-show="filterWorkType === 'all' || card.worktype === filterWorkType">
+          <div v-for="project in projects" :key="project.id" v-show="filterWorktype === 'all' || project.worktype === filterWorkType">
+            <CardComponent
+              :src="project.url"
+              :projectname="project.title"
+              :worktype="project.worktype"
+              :description="project.description"
+            />
+          </div>
+          <!-- <div v-for="card in card_data" :key="card.id" v-show="filterWorkType === 'all' || card.worktype === filterWorkType">
             <CardComponent 
               :src="card.src"
               :projectname="card.projectname"
@@ -19,7 +27,7 @@
               :worktype="card.worktype"
               :href="card.href"
             />
-          </div>
+          </div> -->
         </transition-group>
       </div>
     </div>
@@ -28,12 +36,14 @@
 </template>
 
 <script>
-import CardComponent from "@/components/CardComponent.vue";
+// import CardComponent from "@/components/CardComponent.vue";
+import { db } from '@/firebase';
+import { collection, getDocs } from 'firebase/firestore';
 
 export default {
   name: "WorkView",
   components: {
-    CardComponent,
+    // CardComponent,
   },
   data() {
     return {
@@ -45,6 +55,7 @@ export default {
         { id: 4, name: 'Art', filterWorkType: 'art', buttontype: 'btn btn-outline-primary' },
         { id: 5, name: 'Design', filterWorkType: 'design', buttontype: 'btn btn-outline-info' },
       ],
+      projects: [],
       card_data: [
         { 
           id: 0,
@@ -184,6 +195,10 @@ export default {
 
       ]
     }
+  },
+  async mounted() {
+    const querySnapshot = await getDocs(collection(db, 'projects/code'));
+    this.projects = querySnapshot.docs.map(doc => doc.data())
   },
   methods: {
     filterWorktype(selectedFilter) {
