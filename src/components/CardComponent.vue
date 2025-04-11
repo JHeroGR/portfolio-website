@@ -3,7 +3,7 @@
     <div :id=worktype class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img :src="src" alt="Avatar"/>
+          <img :src="src" alt="Avatar" class="crop-img"/>
         </div>
         <div class="flip-card-back">
           <h1>{{ projectname }}</h1>
@@ -45,6 +45,12 @@ export default {
 </script>
 
 <style>
+.crop-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
 
 .flip-card {
   background-color: transparent;
