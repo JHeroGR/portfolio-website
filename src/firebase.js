@@ -6,7 +6,7 @@ import { getFirestore } from "@firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBwRK7CEOPGxAFgDPkhHduuGEp6xawywLs",
+  apiKey: "API_KEY HERE",
   authDomain: "jherogr-portfolio-website.firebaseapp.com",
   projectId: "jherogr-portfolio-website",
   storageBucket: "jherogr-portfolio-website.firebasestorage.app",
