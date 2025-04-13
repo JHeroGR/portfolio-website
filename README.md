@@ -1,6 +1,6 @@
 # 💼 Personal Portfolio Website
 
-![Portfolio Preview](https://jherogr.github.io/portfolio-website/preview.png)
+![Portfolio Preview](https://res.cloudinary.com/dbwepom1j/image/upload/v1744265215/portfolio-website-image_qveerb.png)
 
 Welcome to my personal developer portfolio website! This project showcases who I am, what I’ve built, and the skills I bring to the table. Built with **HTML**, **CSS**, and **JavaScript**, using **VueJS** with **Firebase Firestore** for Database Storage, and **Cloudinary** for Image Hosting, it serves as a central hub for all my professional links and personal projects.
 
@@ -25,13 +25,6 @@ Welcome to my personal developer portfolio website! This project showcases who I
 - **Vanilla JavaScript**
 - **VueJS**
 - **Adobe Photoshop / Figma** – for mockups/designs
-
----
-
-## 📸 Screenshots
-
-![Home](https://jherogr.github.io/portfolio-website/screenshot-home.png)
-*Homepage view of the portfolio.*
 
 ---
 
