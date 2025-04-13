@@ -21,6 +21,7 @@
       <h5>In addition, I hold a Substitute Teaching certificate, which has supported my role as an After School Program Instructor for athletic and coaching activities.</h5>
       <h5>Currently, I'm pursuing a Master's degree with future plans for a Doctorate in Business Administration.</h5>
       <h5>In my free time, I enjoy planning events and holidays to recharge and find new inspiration for the challenges ahead.</h5>      
+      <h5>I’m a developer with experience in:</h5>
     </div>
   </div>
 </template>
