@@ -13,7 +13,7 @@
         <transition-group name="list">
           <div v-for="project in projects" :key="project.id" v-show="filterWorkType === 'all' || project.worktype === filterWorkType">
             <CardComponent
-              :src="project.src"
+              :src="project.img_src"
               :projectname="project.title"
               :worktype="project.worktype"
               :description="project.description"
