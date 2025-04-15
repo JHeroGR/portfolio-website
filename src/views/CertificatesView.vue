@@ -45,7 +45,8 @@ export default {
 
 <style>
 .certificates .container img {
-    width: 75%;
+    height: 300px;
+    object-fit: cover;
     box-shadow: 0 4px 8px 0 rgb(95, 184, 86);
 
 }
@@ -55,4 +56,7 @@ ul li {
     text-align: left;
 }
 
+.col-md-4 {
+    margin-top: 25px;
+}
 </style>
