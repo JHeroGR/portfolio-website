@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger deployment on push to main branch
+      - master  # Trigger deployment on push to main branch
 
 jobs:
   deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '22^'  # Adjust the version as needed
+          node-version: '22'  # Adjust the version as needed
 
       - name: Install dependencies
         run: npm install
