@@ -45,6 +45,7 @@ export default {
 
 <style>
 .certificates .container img {
+    width: auto;
     height: 300px;
     object-fit: cover;
     box-shadow: 0 4px 8px 0 rgb(95, 184, 86);
