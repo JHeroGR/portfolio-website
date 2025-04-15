@@ -47,136 +47,7 @@ export default {
         { id: 4, name: 'Art', filterWorkType: 'art', buttontype: 'btn btn-outline-primary' },
         { id: 5, name: 'Design', filterWorkType: 'design', buttontype: 'btn btn-outline-info' },
       ],
-      projects: [],
-      // card_data: [
-      //   { 
-      //     id: 0,
-      //     filterWorkType: 'game', 
-      //     src: require('@/assets/game/2D Slug Shooter.png'),
-      //     projectname: "2D Slug Shooter Game",
-      //     description: "2D Shooter Game written in C# made in Unity",
-      //     worktype: "game",
-      //     href: "https://github.com/JHeroGR/2D-Slug-Shooter-Game" 
-      //   },
-      //   {
-      //     id: 1,
-      //     filterWorkType: 'code',
-      //     src: "https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/programming%20languages/ruby.svg",
-      //     projectname: "Ruby Sinatra Starter Project",
-      //     description: "A starter project written in Ruby On Sinatra for programmers.",
-      //     worktype: "code",
-      //     href: "https://github.com/JHeroGR/ruby-sinatra-starter-app",
-      //   },
-      //   {
-      //     id: 2,
-      //     filterWorkType: 'art',
-      //     src: require("@/assets/art/PillowThinkers Logo SUB ICON.png"),
-      //     projectname: 'Pillow Thinkers Logo',
-      //     description: "Logo Design for Pillow Thinkers Youtube-Twitch Podcast Channel",
-      //     worktype: "art",
-      //     href: "https://www.behance.net/gallery/203207257/Pillow-Thinkers-Designs-(Logo-Background-Banner)"
-      //   },
-      //   {
-      //     id: 3,
-      //     filterWorkType: "game",
-      //     src: require('@/assets/game/Epee Fencing.png'),
-      //     projectname: "Epee Fencing Game",
-      //     description: "2D Sword Fighting Game written in C# made in Unity",
-      //     worktype: "game",
-      //     href: "https://github.com/JHeroGR/Epee-Fencing-Game" 
-      //   },
-      //   {
-      //     id: 4,
-      //     filterWorkType: 'code',
-      //     src: "https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/programming%20languages/c++.svg",
-      //     projectname: "CS 2 Work",
-      //     description: "Homework Projects from my Computer Science 2 Class.",
-      //     worktype: "code",
-      //     href: "https://github.com/JHeroGR/CS-2-Work"        
-      //   },
-      //   {
-      //     id: 5,
-      //     filterWorkType: 'game',
-      //     src: require('@/assets/game/Go Home.png'),
-      //     projectname: "Go Home Game",
-      //     description: "2D Survivor Game written in C# made in Unity",
-      //     worktype: "game",
-      //     href: "https://github.com/JHeroGR/Go-Home-Game"
-      //   },
-      //   {
-      //     id: 7,
-      //     filterWorkType: 'art',
-      //     src: require('@/assets/art/BEEP.png'),
-      //     projectname: 'BEEP Emoji',
-      //     description: 'Beep Emoji for streamers',
-      //     worktype: 'art',
-      //     href: '#'
-      //   },
-      //   {
-      //     id: 8,
-      //     filterWorkType: 'art',
-      //     src: require('@/assets/art/GGs.png'),
-      //     projectname: 'GGs Emoji',
-      //     description: 'GGs Emoji for streamers',
-      //     worktype: 'art',
-      //     href: '#'
-      //   },
-      //   {
-      //     id: 9,
-      //     filterWorkType: 'art',
-      //     src: require('@/assets/art/GoodLuckHaveFun.png'),
-      //     projectname: 'GoodLuckHaveFun Emoji',
-      //     description: 'GoodLuckHaveFun Emoji for streamers',
-      //     worktype: 'art',
-      //     href: '#'
-      //   },
-      //   {
-      //     id: 10,
-      //     filterWorkType: 'art',
-      //     src: require('@/assets/art/Hype.png'),
-      //     projectname: 'Hype Emoji',
-      //     description: 'Hype Emoji for streamers',
-      //     worktype: 'art',
-      //     href: '#'
-      //   },
-      //   {
-      //     id: 11,
-      //     filterWorkType: 'art',
-      //     src: require('@/assets/art/LetsGO.png'),
-      //     projectname: 'LetsGO Emoji',
-      //     description: 'LetsGO Emoji for streamers',
-      //     worktype: 'art',
-      //     href: '#'
-      //   },
-      //   {
-      //     id: 11,
-      //     filterWorkType: 'art',
-      //     src: require('@/assets/art/NTs.png'),
-      //     projectname: 'NTs Emoji',
-      //     description: 'NTs Emoji for streamers',
-      //     worktype: 'art',
-      //     href: '#'
-      //   },
-      //   {
-      //     id: 12,
-      //     filterWorkType: 'design',
-      //     src: require('@/assets/design/TPC-LAN-SSBU-NOV-2024-Tournament-Flyer.png'),
-      //     projectname: 'Texas Prospect Cup SSBU LAN Tournament',
-      //     description: 'Gaming Tournament Flyer',
-      //     worktype: 'design',
-      //     href: '#'
-      //   },
-      //   {
-      //     id: 13,
-      //     filterWorkType: 'design',
-      //     src: require('@/assets/design/TPC-LAN-Tournament-Playoffs-Graphics.png'),
-      //     projectname: 'Texas Prospect Cup Playoffs Graphics',
-      //     description: 'Gaming Tournament Playoffs Flyer',
-      //     worktype: 'design',
-      //     href: '#'
-      //   }
-
-      // ]
+      projects: []
     }
   },
   async mounted() {
@@ -188,7 +59,6 @@ export default {
       ...doc.data()
     }));
 
-    console.log(this.projects)
   },
   methods: {
     filterWorktype(selectedFilter) {

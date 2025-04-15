@@ -4,12 +4,14 @@
     <nav id='desktop-nav'>
         <router-link to="/">Home</router-link> |
         <router-link to="/work">Work</router-link> |
+        <router-link to="/certificates">Certificates</router-link> |
         <router-link to="/about">About</router-link> |
         <router-link to="/contact">Contact</router-link>
     </nav>
     <nav id='mobile-nav'>
         <router-link to="/">Home</router-link> |
         <router-link to="/work">Work</router-link> |
+        <router-link to="/certificates">Certificates</router-link> |
         <router-link to="/about">About</router-link> |
         <router-link to="/contact">Contact</router-link>
     </nav>

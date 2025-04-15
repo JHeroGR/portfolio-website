@@ -6,12 +6,12 @@ import { getFirestore } from "@firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "API_KEY_HERE",
-  authDomain: "AUTHORITY_DOMAIN_HERE",
-  projectId: "PROJECT_ID_HERE",
-  storageBucket: "STORAGE_BUCKET",
-  messagingSenderId: "MESSAGING_SENDER_ID",
-  appId: "APP_ID"
+  apiKey: "AIzaSyBwRK7CEOPGxAFgDPkhHduuGEp6xawywLs",
+  authDomain: "jherogr-portfolio-website.firebaseapp.com",
+  projectId: "jherogr-portfolio-website",
+  storageBucket: "jherogr-portfolio-website.firebasestorage.app",
+  messagingSenderId: "31898466991",
+  appId: "1:31898466991:web:e8400fe1d87773b712f25a"
 };
 
 // Initialize Firebase
