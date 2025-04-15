@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment on push to main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22^'  # Adjust the version as needed
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Set environment variables
+        run: |
+          echo "VUE_APP_API_KEY=${{ secrets.FIREBASE_API_KEY }}" >> .env
+
+      - name: Build app
+        run: npm run build  # Builds the Vue app for production
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # The branch to deploy to
+          folder: dist  # The folder to deploy (Vue builds to 'dist')
