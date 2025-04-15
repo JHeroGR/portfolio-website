@@ -1,4 +1,4 @@
-# 💼 Personal Portfolio Website
+# 💼 Portfolio Website
 
 ![Portfolio Preview](https://res.cloudinary.com/dbwepom1j/image/upload/v1744265215/portfolio-website-image_qveerb.png)
 
