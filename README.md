@@ -34,7 +34,7 @@ Here are some ideas I’m considering for future updates:
 
 - [x] Dark mode toggle 🌙
 - [ ] Contact form with email integration 📬
-- [x] Add animations on scroll using AOS.js or GSAP
+- [x] Add animations on scroll and page navigation using Vue Transitions.
 - [ ] Dynamic project listing from GitHub API
 - [ ] Add blog or update section for ongoing learning
 - [ ] Multi-language support (i18n)
