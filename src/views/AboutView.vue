@@ -17,11 +17,9 @@
           <a class="btn btn-secondary" href="https://linkedin.com/in/joel-gutierrez-cmpe" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
   <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
 </svg> LinkedIn</a>
-      <h5>I am a coder, developer, and designer with a B.S. in Computer Engineering from the University of Texas Rio Grande Valley, where I specialized in web, app, and game development. To broaden my skills, I also earned a UX Design certificate, gaining expertise in graphic design and project management.</h5>
-      <h5>In addition, I hold a Substitute Teaching certificate, which has supported my role as an After School Program Instructor for athletic and coaching activities.</h5>
-      <h5>Currently, I'm pursuing a Master's degree with future plans for a Doctorate in Business Administration.</h5>
-      <h5>In my free time, I enjoy planning events and holidays to recharge and find new inspiration for the challenges ahead.</h5>      
-    </div>
+			<h5>I'm a developer and designer with a background in computer engineering and UX design. I specialize in building websites, and applications that are both functional and user-friendly.</h5>
+			<h5>My passion lies in creating websites that support people and businesses—bringing together clean code, thoughtful design, and real-world purpose. Whether I’m working on a web app, a UI concept, or a client project, I focus on simplicity, creativity, and impact.</h5>
+		</div>
   </div>
 </template>
 
