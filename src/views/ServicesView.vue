@@ -9,7 +9,7 @@
             </div>
             <div class="col-md-4">
                 <ServiceCard :title="'Standard'"
-                             :description="'Same Features As Basic With and Maintenance'"
+                             :description="'Same Features As Basic With Maintenance'"
                              :contents="['Same Features as Basic', 'Email Integration', 'Appllication Maintenance']" />
             
             </div>
@@ -34,5 +34,7 @@ export default {
 </script>
 
 <style>
-
+.row {
+    padding: 10px !important;
+}
 </style>
