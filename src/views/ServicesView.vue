@@ -33,6 +33,9 @@ export default {
 </script>
 
 <style>
+.col-md-4 {
+    margin-bottom: 10%;
+}
 
 .row {
     padding: 10px !important;
