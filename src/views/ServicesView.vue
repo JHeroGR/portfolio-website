@@ -8,11 +8,9 @@
                              :contents="['3 Pages', 'Design Showcase', 'Hosting']" />
             </div>
             <div class="col-md-4">
-                <div class="big-border">
                     <ServiceCard :title="'Standard'"
                                  :description="'Same Features As Basic With Maintenance'"
                                  :contents="['Same Features as Basic', 'Email Integration', 'Appllication Maintenance']" />
-                </div>
             </div>
             <div class="col-md-4">
                 <ServiceCard :title="'Premium'" 
@@ -35,10 +33,7 @@ export default {
 </script>
 
 <style>
-.big-border {
-    border-color: green;
-    border-width: 10px;
-}
+
 .row {
     padding: 10px !important;
 }
