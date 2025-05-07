@@ -52,11 +52,11 @@ export default {
 </script>
 
 <style>
-.row {
-    padding: 10px !important;
+.col-md-4 {
+    margin-bottom: 10%;
 }
 
-.col-md-4 {
-    margin-bottom: 25px;
+.row {
+    padding: 10px !important;
 }
 </style>

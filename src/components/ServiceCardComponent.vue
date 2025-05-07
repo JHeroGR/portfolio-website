@@ -1,8 +1,8 @@
 <template>
     <div class="card h-100" style="width: auto">
+        <h3 class="card-header card-title">{{ title }}</h3>
         <div class="card-body">
-            <h2 class="card-title">{{ title }}</h2>
-            <h4 class="card-text">{{ description }}</h4>
+            <p class="card-text">{{ description }}</p>
             <ul>
                 <li v-for="item in contents" :key="item">{{ item }}</li>
             </ul>
