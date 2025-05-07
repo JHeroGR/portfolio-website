@@ -1,14 +1,14 @@
 <template>
     <div class="card h-100" style="width: auto">
         <div class="card-body">
-            <h3 class="card-title">{{ title }}</h3>
-            <p class="card-text">{{ description }}</p>
+            <h2 class="card-title">{{ title }}</h2>
+            <h4 class="card-text">{{ description }}</h4>
             <ul>
                 <li v-for="item in contents" :key="item">{{ item }}</li>
             </ul>
         </div>
-        <div class="card-footer bg-transparent">
-            <button class="btn btn-outline-primary">Select Package</button>
+        <div class="card-footer">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" @click="handleSelect">Select Package</button>
         </div>
     </div>
     <br />
@@ -29,6 +29,13 @@ export default {
         contents: {
             type: Array,
             required: true
+        }
+    },
+    methods: {
+        handleSelect() {
+            this.$emit('select', {
+                title: this.title
+            });
         }
     }
 }
