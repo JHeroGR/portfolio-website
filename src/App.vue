@@ -2,7 +2,7 @@
   <div class="d-flex flex-column min-vh-100">
     <ParticlesComponent />
     <NavBarComponent />
-      <router-view v-slot="{ Component }">
+      <router-view :key="$route.fullPath" v-slot="{ Component }">
         <transition name="slide" mode="out-in">
           <component :is="Component" />
         </transition>
