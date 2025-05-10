@@ -50,17 +50,23 @@ export default {
       projects: []
     }
   },
-  async mounted() {
-    const colRef = collection(db, 'projects'); // valid path: 3 segments
-    const querySnapshot = await getDocs(colRef);
-
-    this.projects = querySnapshot.docs.map(doc => ({
-      id: doc.id,
-      ...doc.data()
-    }));
-
+  mounted() {
+    this.fetchProjects()
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.fetchData(); // Replace with your data fetching method
+    next();
   },
   methods: {
+    async fetchProjects () {
+      const colRef = collection(db, 'projects'); // valid path: 3 segments
+      const querySnapshot = await getDocs(colRef);
+
+      this.projects = querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+    },
     filterWorktype(selectedFilter) {
       this.filterWorkType = selectedFilter; // Set the global filter type
     }

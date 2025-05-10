@@ -30,15 +30,23 @@ export default {
         certificates: []
     }
   },
-  async mounted() {
-    const colRef = collection(db, 'certificates'); // valid path: 3 segments
-    const querySnapshot = await getDocs(colRef);
+  mounted() {
+    this.fetchCertificates()
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.fetchData();
+    next()
+  },
+  methods: {
+    async fetchCertificates () {
+        const colRef = collection(db, 'certificates')
+        const querySnapshot = await getDocs(colRef)
 
-    this.certificates = querySnapshot.docs.map(doc => ({
-      id: doc.id,
-      ...doc.data()
-    }));
-
+        this.certificates = querySnapshot.docs.map(doc => ({
+            id: doc.id,
+            ...doc.data()
+        }));
+    }
   }
 }
 </script>
