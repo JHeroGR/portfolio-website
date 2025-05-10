@@ -9,7 +9,7 @@
     </div>
     <h2>{{ price }}</h2>
     <div class="card-footer">
-      <button class="btn btn-success" @click="emitSelected">Select Package</button>
+      <button :class="['btn', card_header_type]" @click="emitSelected">Select Package</button>
     </div>
   </div>
 </template>
