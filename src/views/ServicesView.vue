@@ -60,7 +60,7 @@ export default {
                 price: '$1,500 / Month',
                 title: 'Premium',
                 description: 'Same Features As Basic With Maintenance, and Monthly Reports',
-                contents: ['Same Features as Basic', 'Email Integration', 'Appllication Maintenance'],
+                contents: ['Same Features as Basic', 'Email Integration', 'Appllication Maintenance', 'Monthly Reports'],
                 payment_link: 'https://buy.stripe.com/test_28EeVf5Jo0sd10X83W7ss02'
             }]
         }

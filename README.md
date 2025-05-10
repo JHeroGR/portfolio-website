@@ -36,7 +36,7 @@ Here are some ideas I’m considering for future updates:
 - [ ] Contact form with email integration 📬
 - [x] Add animations on scroll and page navigation using Vue Transitions.
 - [x] Dynamic project listing from GitHub API
-- [x] Changed to Business Site
+- [x] Changed to Business Site including Stripe redirects
 - [ ] Add blog or update section for ongoing learning
 - [ ] Multi-language support (i18n)
 
