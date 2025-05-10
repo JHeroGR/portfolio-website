@@ -8,9 +8,9 @@
       </ul>
     </div>
     <h2>{{ price }}</h2>
-    <div class="card-footer">
-      <button :class="['btn', card_header_type]" @click="emitSelected">Select Package</button>
-    </div>
+    <button :class="['card-footer', 'btn', card_header_type]" @click="emitSelected">Select Package</button>
+    <!-- <button :class="['btn', card_header_type]" @click="emitSelected">Select Package</button> -->
+    
   </div>
 </template>
 
@@ -45,8 +45,13 @@ li {
 }
 
 .card {
-    background-color: hsla(0, 0%, 100%, 0.5) !important;
+    background-color: hsla(0, 0%, 100%, 0) !important;
     color: inherit;
+    border-color: inherit;
+}
+
+.card-footer {
+  font-weight: bolder !important;
 }
 
 </style>

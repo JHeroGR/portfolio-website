@@ -33,7 +33,6 @@
 
 <script>
 import ServiceCard from "@/components/ServiceCardComponent.vue"
-// import ModalComponent from "@/components/ModalComponent.vue"
 import * as bootstrap from 'bootstrap'
 
 export default {
@@ -46,21 +45,21 @@ export default {
                 price: '$300 / Month',
                 title: 'Basic',
                 description: 'UI/UX Showing of Web Application Project in Figma and Hosting the Website',
-                contents: ['3 Pages', 'Design Showcase', 'Hosting'],
+                contents: ['3 Pages', 'Design Showcase', 'Hosting', '1 Revision'],
                 payment_link: 'https://buy.stripe.com/test_9B67sN5Jo7UFdNJac47ss00'
             }, {
                 card_header_type: 'standard-card-header',
                 price: '$700 / Month',
                 title: 'Standard',
                 description: 'Same Features As Basic With Maintenance',
-                contents: ['Same Features as Basic', 'Email Integration', 'Appllication Maintenance'],
+                contents: ['Same Features as Basic', 'Email Integration', 'Appllication Maintenance', '3 Revisions'],
                 payment_link: 'https://buy.stripe.com/test_cNi4gB2xca2N4d91Fy7ss01'
             }, {
                 card_header_type: 'premium-card-header',
                 price: '$1,500 / Month',
                 title: 'Premium',
                 description: 'Same Features As Basic With Maintenance, and Monthly Reports',
-                contents: ['Same Features as Basic', 'Email Integration', 'Appllication Maintenance', 'Monthly Reports'],
+                contents: ['Same Features as Basic', 'Email Integration', 'Appllication Maintenance', 'Monthly Reports', '5 Revisions'],
                 payment_link: 'https://buy.stripe.com/test_28EeVf5Jo0sd10X83W7ss02'
             }]
         }
