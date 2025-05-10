@@ -34,8 +34,19 @@ export default {
 </script>
 
 <style>
+.card-text {
+    font-weight: bolder;
+}
+
 li {
     list-style-type: circle;
     text-align: left;
+    font-weight: bolder;
 }
+
+.card {
+    background-color: hsla(0, 0%, 100%, 0.5) !important;
+    color: inherit;
+}
+
 </style>

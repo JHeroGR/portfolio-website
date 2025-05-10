@@ -73,11 +73,9 @@ export default {
         handleSelect(serviceCard) {
             console.log('hit')
             this.selectedPackage = serviceCard;
-
-                const modalEl = document.getElementById("serviceModal");
-                const modal = new bootstrap.Modal(modalEl);
-                modal.show();
-
+            const modalEl = document.getElementById("serviceModal");
+            const modal = new bootstrap.Modal(modalEl);
+            modal.show();
         }
 
 
@@ -87,14 +85,14 @@ export default {
 
 <style>
 .basic-card-header {
-    background-color: #2ecc71;
+    background-color: rgba(46, 204, 113, 0.7) !important;
 }
 
 .standard-card-header {
-    background-color: #f1c40f;
+    background-color: rgba(241,196,15, 0.7) !important;
 }
 
 .premium-card-header {
-    background-color: #0057FF;
+    background-color: rgba(0,87,255, 0.7) !important;
 }
 </style>
