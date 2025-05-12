@@ -8,9 +8,7 @@
       </ul>
     </div>
     <h2>{{ price }}</h2>
-    <button :class="['card-footer', 'btn', card_header_type]" @click="emitSelected">Select Package</button>
-    <!-- <button :class="['btn', card_header_type]" @click="emitSelected">Select Package</button> -->
-    
+    <footer :class="['card-footer', 'btn', card_header_type]" @click="emitSelected">Select Package</footer>
   </div>
 </template>
 
