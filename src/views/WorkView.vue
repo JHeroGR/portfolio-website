@@ -80,7 +80,7 @@ button {
   margin-bottom: 20px;
 }
 
-.btn-outline-info:hover, .active {
+.btn-outline-info:hover, .btn.active {
   color: white;
 }
 
