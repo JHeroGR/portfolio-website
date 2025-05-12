@@ -8,7 +8,7 @@
       </ul>
     </div>
     <h2>{{ price }}</h2>
-    <footer :class="['card-footer', 'btn', card_header_type]" @click="emitSelected">Select Package</footer>
+    <button :class="['card-footer', 'btn', card_header_type]" @click="emitSelected">Select Package</button>
   </div>
 </template>
 
