@@ -133,7 +133,9 @@ export default {
 }
 
 img {
-  width: 300px; height: 300px; object-fit: cover;
+  width: 300px; 
+	height: 300px; 
+	object-fit: cover;
 }
 
 @media only screen and (max-width:600px) {

@@ -80,6 +80,10 @@ button {
   margin-bottom: 20px;
 }
 
+.btn-outline-info:hover, .btn.active, :not(.btn-check)+.btn:active {
+  color: white;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr) !important; /* 4 equal columns */
