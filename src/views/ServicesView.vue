@@ -59,11 +59,7 @@ export default {
             }, {
                 card_header_text: 'premium-card-text',
                 card_header_type: 'premium-card-header',
-<<<<<<< HEAD
-                price: '$1,000 / Month',
-=======
                 price: '$500 / Month',
->>>>>>> 667db79a09528c0cb077d236c3f2e2f8c86bfc37
                 title: 'Premium',
                 description: 'Same Features As Basic With Maintenance, and Monthly Reports',
                 contents: ['Same Features as Basic', 'Email Integration', 'Appllication Maintenance', 'Monthly Reports', '5 Revisions'],
