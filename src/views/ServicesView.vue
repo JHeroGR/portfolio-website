@@ -14,10 +14,10 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalLabel">{{ selectedPackage.title }}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                        <h4 class="modal-title" id="modalLabel"><span :class=selectedPackage.card_header_text>{{ selectedPackage.title }} Package</span></h4>
                         <h6>You want to select this package?</h6>
                         <p>You will be redirected to our checkout page.</p>
                     </div>
@@ -41,6 +41,7 @@ export default {
         return {
             selectedPackage: {},
             serviceCards: [{
+                card_header_text: 'basic-card-text',
                 card_header_type: 'basic-card-header',
                 price: '$300 / Month',
                 title: 'Basic',
@@ -48,6 +49,7 @@ export default {
                 contents: ['3 Pages', 'Design Showcase', 'Hosting', '1 Revision'],
                 payment_link: 'https://buy.stripe.com/test_9B67sN5Jo7UFdNJac47ss00'
             }, {
+                card_header_text: 'standard-card-text',
                 card_header_type: 'standard-card-header',
                 price: '$700 / Month',
                 title: 'Standard',
@@ -55,8 +57,9 @@ export default {
                 contents: ['Same Features as Basic', 'Email Integration', 'Appllication Maintenance', '3 Revisions'],
                 payment_link: 'https://buy.stripe.com/test_cNi4gB2xca2N4d91Fy7ss01'
             }, {
+                card_header_text: 'premium-card-text',
                 card_header_type: 'premium-card-header',
-                price: '$1,500 / Month',
+                price: '$1,000 / Month',
                 title: 'Premium',
                 description: 'Same Features As Basic With Maintenance, and Monthly Reports',
                 contents: ['Same Features as Basic', 'Email Integration', 'Appllication Maintenance', 'Monthly Reports', '5 Revisions'],
@@ -93,5 +96,17 @@ export default {
 
 .premium-card-header {
     background-color: rgba(0,87,255, 0.7) !important;
+}
+
+.basic-card-text {
+    color: rgba(46, 204, 113, 0.7) !important;
+}
+
+.standard-card-text {
+    color: rgba(241,196,15, 0.7) !important;
+}
+
+.premium-card-text {
+    color: rgba(0,87,255, 0.7) !important;
 }
 </style>
