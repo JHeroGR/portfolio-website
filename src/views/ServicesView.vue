@@ -43,7 +43,7 @@ export default {
             serviceCards: [{
                 card_header_text: 'basic-card-text',
                 card_header_type: 'basic-card-header',
-                price: '$100 / Month',
+                price: '$30 / Month',
                 title: 'Basic',
                 description: 'UI/UX Showing of Web Application Project in Figma and Hosting the Website',
                 contents: ['3 Pages', 'Design Showcase', 'Hosting', '1 Revision'],
@@ -51,7 +51,7 @@ export default {
             }, {
                 card_header_text: 'standard-card-text',
                 card_header_type: 'standard-card-header',
-                price: '$350 / Month',
+                price: '$50 / Month',
                 title: 'Standard',
                 description: 'Same Features As Basic With Maintenance',
                 contents: ['Same Features as Basic', 'Email Integration', 'Appllication Maintenance', '3 Revisions'],
@@ -59,7 +59,7 @@ export default {
             }, {
                 card_header_text: 'premium-card-text',
                 card_header_type: 'premium-card-header',
-                price: '$500 / Month',
+                price: '$100 / Month',
                 title: 'Premium',
                 description: 'Same Features As Basic With Maintenance, and Monthly Reports',
                 contents: ['Same Features as Basic', 'Email Integration', 'Appllication Maintenance', 'Monthly Reports', '5 Revisions'],
