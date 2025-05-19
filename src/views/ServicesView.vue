@@ -47,7 +47,7 @@ export default {
                 title: 'Basic',
                 description: 'UI/UX Showing of Web Application Project in Figma and Hosting the Website',
                 contents: ['3 Pages', 'Design Showcase', 'Hosting', '1 Revision'],
-                payment_link: 'https://buy.stripe.com/test_9B67sN5Jo7UFdNJac47ss00'
+                payment_link: 'https://buy.stripe.com/test_dRmdRb8VA4It8tp2JC7ss03'
             }, {
                 card_header_text: 'standard-card-text',
                 card_header_type: 'standard-card-header',
@@ -55,7 +55,7 @@ export default {
                 title: 'Standard',
                 description: 'Same Features As Basic With Maintenance',
                 contents: ['Same Features as Basic', 'Email Integration', 'Appllication Maintenance', '3 Revisions'],
-                payment_link: 'https://buy.stripe.com/test_cNi4gB2xca2N4d91Fy7ss01'
+                payment_link: 'https://buy.stripe.com/test_dRm3cxdbQ8YJbFB4RK7ss04'
             }, {
                 card_header_text: 'premium-card-text',
                 card_header_type: 'premium-card-header',
@@ -63,7 +63,7 @@ export default {
                 title: 'Premium',
                 description: 'Same Features As Basic With Maintenance, and Monthly Reports',
                 contents: ['Same Features as Basic', 'Email Integration', 'Appllication Maintenance', 'Monthly Reports', '5 Revisions'],
-                payment_link: 'https://buy.stripe.com/test_28EeVf5Jo0sd10X83W7ss02'
+                payment_link: 'https://buy.stripe.com/test_8x2cN74Fkb6RcJFgAs7ss05'
             }]
         }
     },
