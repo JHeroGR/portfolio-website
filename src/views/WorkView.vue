@@ -103,7 +103,7 @@ button {
 .list-enter-from,
 .list-leave-to {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(5px);
 }
 
 /* ensure leaving items are taken out of layout flow so that moving
