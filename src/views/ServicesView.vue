@@ -1,5 +1,6 @@
 <template>
     <h1>What I Offer</h1>
+    
     <div class="container">
         <div class="row">
             <div v-for="(serviceCard, index) in serviceCards" :key="index" class="col-md-4 mb-4">
