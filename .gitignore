@@ -25,3 +25,5 @@ pnpm-debug.log*
 *.sw?
 
 src/firebase_copy.js
+
+jherogr-*.json
