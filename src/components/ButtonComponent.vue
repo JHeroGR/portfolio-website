@@ -17,10 +17,10 @@ export default {
             type: String,
             default: 'In Dev'
         },
-				icon: {
-						type: String,
-						default: 'bi bi-file-earmark-person-fill'
-				}
+        icon: {
+            type: String,
+            default: 'bi bi-file-earmark-person-fill'
+        }
     }
 }
 </script>
