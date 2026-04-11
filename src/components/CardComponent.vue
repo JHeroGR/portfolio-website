@@ -8,7 +8,6 @@
         <div class="flip-card-back">
           <h1>{{ projectname }}</h1>
           <h4><u>{{ worktype }}</u></h4>
-          <p>{{ description }}</p>
           <a :href=href class='btn btn-light' target='_blank'>Go to Project</a>
       </div>
       </div>
@@ -27,10 +26,6 @@ export default {
     projectname: { 
       type: String,
       default: 'Project Name'
-    },
-    description: {
-      type: String,
-      default: 'Project Description goes here'
     },
     href: {
       type: String,
