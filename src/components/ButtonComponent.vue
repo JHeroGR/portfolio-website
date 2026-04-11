@@ -1,7 +1,6 @@
 <template>
     <a class="btn btn-secondary" :href="href" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" :class="icon" viewBox="0 0 16 16">
-            </svg> 
+        <i :class="icon"></i>
             {{ name }}
     </a>
 </template>
