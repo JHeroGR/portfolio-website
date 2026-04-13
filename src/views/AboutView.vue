@@ -1,10 +1,10 @@
 <template>
   <div class="about">
     <div class="container">
-          <ButtonComponent href="https://jherogr.github.io/resume/" target="_blank" name="Resume"></ButtonComponent>
-          <ButtonComponent href="https://behance.net/jherogr" target="_blank" name="Behance"></ButtonComponent>
-          <ButtonComponent href="https://github.com/JHeroGR" target="_blank" name="Github"></ButtonComponent>
-          <ButtonComponent href="https://linkedin.com/in/joel-gutierrez-cmpe" target="_blank" name="LinkedIn"></ButtonComponent>
+          <ButtonComponent href="https://jherogr.github.io/resume/" target="_blank" name="Resume" class="bi bi-file-earmark-person-fill"></ButtonComponent>
+          <ButtonComponent href="https://behance.net/jherogr" target="_blank" name="Behance" class="bi bi-behance"></ButtonComponent>
+          <ButtonComponent href="https://github.com/JHeroGR" target="_blank" name="Github" class="bi bi-github"></ButtonComponent>
+          <ButtonComponent href="https://linkedin.com/in/joel-gutierrez-cmpe" target="_blank" name="LinkedIn" class="bi bi-linkedin"></ButtonComponent>
           
         
 			<h5>I'm a developer and designer with a background in computer engineering and UX design. I specialize in building websites, and applications that are both functional and user-friendly.</h5>
