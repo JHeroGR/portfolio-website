@@ -1,14 +1,21 @@
 <template>
     <div class="blog">
-        <div class="container">
-            <h1>Blog</h1>
-            <p>Welcome to my blog! Here, I share insights, tutorials, and stories about web development, design, and technology. Whether you're a fellow developer, designer, or just curious about the world of coding, there's something here for you. Dive in and explore my latest posts!</p>
-            
-            
+        <h1>Blog Goes Here</h1>
+        <div class="blog-content">
+            <h3>Post Title</h3>
+            <h4>Post Description</h4>
         </div>
     </div>
 </template>
 
 <script>
-
+export default {
+    name: 'BlogView'
+}
 </script>
+
+<style>
+.blog-content {
+    text-align: left;
+}
+</style>
