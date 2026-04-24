@@ -5,9 +5,8 @@
           <ButtonComponent href="https://behance.net/jherogr" target="_blank" icon="bi bi-behance" name="Behance" />
           <ButtonComponent href="https://github.com/JHeroGR" target="_blank" icon="bi bi-github" name="Github" />
           <ButtonComponent href="https://linkedin.com/in/joel-gutierrez-cmpe" target="_blank" icon="bi bi-linkedin" name="LinkedIn" />
-          
-        
-			<h5>I'm a developer and designer with a background in computer engineering and UX design. I specialize in building websites, and applications that are both functional and user-friendly.</h5>
+          <ButtonComponent href="/blog" icon="bi bi-substack" name="Blog" />
+      <h5>I'm a developer and designer with a background in computer engineering and UX design. I specialize in building websites, and applications that are both functional and user-friendly.</h5>
 			<h5>My passion lies in creating websites that support people and businesses—bringing together clean code, thoughtful design, and real-world purpose. Whether I’m working on a web app, a UI concept, or a client project, I focus on simplicity, creativity, and impact.</h5>
 		</div>
   </div>
