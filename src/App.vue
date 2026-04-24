@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column min-vh-100">
+  <div id="home" class="d-flex flex-column min-dvh-100">
     <ParticlesComponent />
     <NavBarComponent />
       <router-view :key="$route.fullPath" v-slot="{ Component }">
