@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joel Gutierrez | Blog for Web Development Insights</title>
+    <meta
+      name="description"
+      content="Explore Joel Gutierrez’s blog for practical insights on Vue.js, React, web performance, accessibility, and modern product design."
+    />
+    <meta
+      name="keywords"
+      content="Joel Gutierrez blog, web development blog, Vue.js, React, accessibility, web performance"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://www.joelgutierrez.dev/blog-app.html" />
+    <meta property="og:title" content="Joel Gutierrez | Blog for Web Development Insights" />
+    <meta
+      property="og:description"
+      content="Thoughtful articles on frontend development, design systems, and building high-performing digital experiences."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.joelgutierrez.dev/blog-app.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Joel Gutierrez | Blog for Web Development Insights" />
+    <meta
+      name="twitter:description"
+      content="Practical frontend and product thinking from Joel Gutierrez."
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Joel Gutierrez Blog",
+        "description": "Practical insights on frontend development, design systems, accessibility, and performance.",
+        "author": {
+          "@type": "Person",
+          "name": "Joel Gutierrez"
+        },
+        "url": "https://www.joelgutierrez.dev/blog-app.html"
+      }
+    </script>
+    <link rel="stylesheet" href="./blog/blog-app/css/styles.css" />
+  </head>
+  <body>
+    <div class="blog-app">
+      <header class="blog-navbar">
+        <div class="navbar-content">
+          <div class="brand-group">
+            <h1 class="blog-title">Joel’s Blog</h1>
+            <p class="blog-tagline">Frontend notes, product thinking, and practical build tips.</p>
+          </div>
+          <div class="header-actions">
+            <label class="theme-picker" for="themeSelect">
+              <span aria-hidden="true">🎨</span>
+              <select id="themeSelect">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="system">System</option>
+              </select>
+            </label>
+            <a class="back-button" href="./index.html">Back to Portfolio</a>
+          </div>
+        </div>
+      </header>
+
+      <main class="blog-main">
+        <div class="blog-container">
+          <section class="blog-header">
+            <p class="eyebrow">Developer Journal</p>
+            <h2>Thoughts on building modern web experiences</h2>
+            <p class="subtitle">
+              A curated collection of notes on Vue, React, performance, accessibility, and product thinking.
+            </p>
+          </section>
+
+          <section class="blog-posts" id="blogPosts"></section>
+        </div>
+      </main>
+
+      <footer class="blog-footer">
+        <p>© 2026 Joel Gutierrez. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="./blog/blog-app/js/main.js"></script>
+  </body>
+</html>

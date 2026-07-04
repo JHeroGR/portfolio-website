@@ -7,6 +7,7 @@
         <router-link to="/certificates">Certificates</router-link> |
         <router-link to="/about">About</router-link> |
         <!-- <router-link to="/services">Services</router-link> | -->
+        <a href="#" @click.prevent="openBlog">Blog</a> |
         <router-link to="/contact">Contact</router-link>
     </nav>
     <nav id='mobile-nav'>
@@ -15,13 +16,20 @@
         <router-link to="/certificates">Certificates</router-link> |
         <router-link to="/about">About</router-link> |
         <!-- <router-link to="/services">Services</router-link> | -->
+        <a href="#" @click.prevent="openBlog">Blog</a> |
         <router-link to="/contact">Contact</router-link>
     </nav>
 </template>
 
 <script>
 export default {
-    name: 'NavBarComponent'
+    name: 'NavBarComponent',
+    methods: {
+        openBlog() {
+            // Open blog in a new tab
+            window.open('/blog/blog-app.html', '_blank');
+        }
+    }
 }
 </script>
 
