@@ -8,7 +8,7 @@
         <router-link to="/work">Work</router-link> |
         <router-link to="/certificates">Certificates</router-link> |
         <router-link to="/about">About</router-link> |
-        <router-link to="/blog">Blog</router-link> |
+        <router-link to="/blog" exact-active-class="router-link-active" :class="{ 'router-link-active': $route.name === 'blog' || $route.name === 'blog-detail' }">Blog</router-link> |
         <router-link to="/contact">Contact</router-link>
       </nav>
       <nav id="mobile-nav">
@@ -16,7 +16,7 @@
         <router-link to="/work">Work</router-link> |
         <router-link to="/certificates">Certificates</router-link> |
         <router-link to="/about">About</router-link> |
-        <router-link to="/blog">Blog</router-link> |
+        <router-link to="/blog" exact-active-class="router-link-active" :class="{ 'router-link-active': $route.name === 'blog' || $route.name === 'blog-detail' }">Blog</router-link> |
         <router-link to="/contact">Contact</router-link>
       </nav>
       <ThemeToggle :model-value="themeMode" @update:modelValue="setTheme" />
@@ -71,7 +71,8 @@ nav a {
   color: inherit;
 }
 
-nav a.router-link-exact-active {
+nav a.router-link-exact-active,
+nav a.router-link-active {
   text-decoration: underline;
   text-decoration-color: var(--app-accent);
   color: var(--app-accent);
