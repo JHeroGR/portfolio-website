@@ -1,42 +1,61 @@
 <template>
-    <h1 class='h1'>Joel Gutierrez</h1>
+  <header class="navbar-shell">
+    <h1 class="h1 mb-3">Joel Gutierrez</h1>
 
-    <nav id='desktop-nav'>
+    <div class="navbar-controls">
+      <nav id="desktop-nav">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/work">Work</router-link> |
+        <router-link to="/certificates">Certificates</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/blog" exact-active-class="router-link-active" :class="{ 'router-link-active': $route.name === 'blog' || $route.name === 'blog-detail' }">Blog</router-link> |
+        <router-link to="/contact">Contact</router-link>
+      </nav>
+      <nav id="mobile-nav">
         <router-link to="/">Home</router-link> |
         <router-link to="/work">Work</router-link> |
         <router-link to="/certificates">Certificates</router-link> |
         <router-link to="/about">About</router-link> |
         <!-- <router-link to="/services">Services</router-link> | -->
-        <a href="#" @click.prevent="openBlog">Blog</a> |
         <router-link to="/contact">Contact</router-link>
-    </nav>
-    <nav id='mobile-nav'>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/work">Work</router-link> |
-        <router-link to="/certificates">Certificates</router-link> |
-        <router-link to="/about">About</router-link> |
-        <!-- <router-link to="/services">Services</router-link> | -->
-        <a href="#" @click.prevent="openBlog">Blog</a> |
-        <router-link to="/contact">Contact</router-link>
-    </nav>
+      </nav>
+      <ThemeToggle :model-value="themeMode" @update:modelValue="setTheme" />
+    </div>
+  </header>
 </template>
 
 <script>
+import ThemeToggle from '@/components/ThemeToggle.vue'
+import { useTheme } from '@/composables/useTheme'
+
 export default {
-    name: 'NavBarComponent',
-    methods: {
-        openBlog() {
-            // Open blog in a new tab
-            window.open('/blog/blog-app.html', '_blank');
-        }
-    }
+    name: 'NavBarComponent'
 }
 </script>
 
-<style>
+<style scoped>
+.navbar-shell {
+  padding: 1.5rem 1rem 0.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.navbar-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 nav {
-  padding: 30px;
+  padding: 12px 0;
   font-size: larger;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 nav a {
@@ -45,12 +64,11 @@ nav a {
   color: inherit;
 }
 
-nav a.router-link-exact-active {
+nav a.router-link-exact-active,
+nav a.router-link-active {
   text-decoration: underline;
-  text-decoration-color: #006538;
-    color: #42b983;
-    -webkit-text-stroke: 0.5px #00361e;
-
+  text-decoration-color: var(--app-accent);
+  color: var(--app-accent);
 }
 
 #mobile-nav {
@@ -61,7 +79,7 @@ nav a.router-link-exact-active {
   #desktop-nav {
     display: none;
   }
-  
+
   #mobile-nav {
     display: block;
   }

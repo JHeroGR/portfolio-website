@@ -1,5 +1,5 @@
 <template>
-    <a class="btn btn-secondary" :href="href" target="_blank">
+    <a class="btn btn-secondary" :href="href">
         <i :class="icon"></i>
             {{ name }}
     </a>

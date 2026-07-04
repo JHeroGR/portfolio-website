@@ -9,12 +9,14 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^17.2.2",
     "@popperjs/core": "^2.11.8",
     "@tsparticles/slim": "^3.5.0",
     "@tsparticles/vue3": "^3.0.1",
     "@vueuse/core": "^11.2.0",
     "bootstrap": "^5.3.6",
     "bootstrap-icons": "^1.11.3",
+    "contentful": "^11.12.1",
     "core-js": "^3.8.3",
     "firebase": "^11.6.1",
     "gh-pages": "^6.3.0",

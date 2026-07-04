@@ -1,225 +1,99 @@
 <template>
-  <div class="blog-container">
-    <div class="blog-header">
-      <h1>Blog</h1>
-      <p class="blog-subtitle">Thoughts, insights, and stories from my journey</p>
-    </div>
-    
-    <div class="blog-posts">
-      <div v-for="post in blogPosts" :key="post.id" class="blog-post">
-        <div class="post-header">
-          <h2>{{ post.title }}</h2>
-          <p class="post-subtitle">{{ post.subtitle }}</p>
-          <p class="post-date">{{ formatDate(post.dateCreated) }}</p>
-        </div>
-        
-        <div class="post-content">
-          <p v-if="post.text.length > 280" class="post-text">
-            {{ truncateText(post.text, 280) }}...
-            <a href="#" @click.prevent="toggleExpand(post.id)" class="read-more">
-              {{ post.expanded ? 'Read less' : 'Read more' }}
-            </a>
-          </p>
-          <p v-else class="post-text">{{ post.text }}</p>
-          
-          <div v-if="post.expanded && post.text.length > 280" class="expanded-text">
-            {{ post.text }}
+  <main class="blog-page py-5">
+    <div class="container">
+      <header class="text-start mb-5">
+        <p class="blog-page__eyebrow">Journal</p>
+        <h1 class="display-5 fw-bold">Writing for thoughtful product experiences.</h1>
+        <p class="lead">
+          This blog layout combines a simple content model, semantic routes, and a clear reading flow for future articles.
+        </p>
+      </header>
+
+      <section v-if="featuredPost" class="featured-card mb-5 p-4 rounded-4 shadow-sm">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-8 text-start">
+            <p class="small text-uppercase mb-2">Featured article</p>
+            <h2 class="h3 fw-semibold">{{ featuredPost.title }}</h2>
+            <p class="mb-3">{{ featuredPost.excerpt }}</p>
+            <router-link class="btn btn-outline-primary" :to="{ name: 'blog-detail', params: { slug: featuredPost.slug } }">
+              Read article
+            </router-link>
+          </div>
+          <div class="col-lg-4 text-start">
+            <p class="mb-1"><strong>Category:</strong> {{ featuredPost.category }}</p>
+            <p class="mb-1"><strong>Read time:</strong> {{ featuredPost.readTime }}</p>
+            <p class="mb-0"><strong>Published:</strong> {{ featuredPost.publishedAt }}</p>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+        <div v-for="post in posts" :key="post.slug" class="col">
+          <BlogCard :post="post" />
+        </div>
+      </section>
+
+      <section class="text-start architecture-card p-4 rounded-4 shadow-sm">
+        <h2 class="h4 fw-semibold">Suggested basic architecture</h2>
+        <ul class="mt-3 mb-0">
+          <li>Content stored in a single data module for easy maintenance.</li>
+          <li>Route-based detail pages for individual articles.</li>
+          <li>SEO metadata updated per article and page.</li>
+          <li>A theme toggle that supports light, dark, and system preferences.</li>
+        </ul>
+      </section>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
+import { computed, onMounted } from 'vue'
+import BlogCard from '@/components/BlogCard.vue'
+import { featuredPost, posts } from '@/data/blogPosts'
+import { useSeo } from '@/composables/useSeo'
+
 export default {
   name: 'BlogView',
-  data() {
-    return {
-      blogPosts: [
-        {
-          id: 1,
-          title: 'Getting Started with Vue.js',
-          subtitle: 'A beginner\'s guide to building reactive web applications',
-          dateCreated: new Date('2024-06-15'),
-          text: 'Vue.js is a progressive JavaScript framework that makes building interactive user interfaces simple and enjoyable. Whether you\'re building a small widget or a full-featured application, Vue scales from a simple library to a sophisticated framework. Vue\'s reactivity system automatically tracks dependencies and efficiently updates the DOM when data changes. One of the best parts about Vue is its gentle learning curve - if you know HTML, CSS, and JavaScript, you can pick up Vue in a matter of days.',
-          expanded: false
-        },
-        {
-          id: 2,
-          title: 'Understanding React Hooks',
-          subtitle: 'Deep dive into modern React development patterns',
-          dateCreated: new Date('2024-05-22'),
-          text: 'Hooks are functions that let you "hook into" React features. They allow you to use state and other React features without writing a class component. The useState Hook lets you add state to functional components, which previously was only available in class components. The useEffect Hook lets you perform side effects in functional components - it serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount combined. Understanding hooks is crucial for writing modern, clean React code that\'s easier to understand and maintain.',
-          expanded: false
-        },
-        {
-          id: 3,
-          title: 'Web Performance Optimization Tips',
-          subtitle: 'Strategies to make your websites faster and more efficient',
-          dateCreated: new Date('2024-04-10'),
-          text: 'Web performance is critical for user experience and SEO. Slow websites lead to higher bounce rates and lower conversion rates. There are many techniques to optimize performance: minimizing and compressing assets, lazy loading images, code splitting, using a Content Delivery Network (CDN), and caching strategies. Browser Developer Tools can help identify performance bottlenecks. Lighthouse is an excellent tool for auditing your site\'s performance, accessibility, and best practices. Remember that performance optimization is an ongoing process - always monitor and improve based on real user metrics.',
-          expanded: false
-        }
-      ]
-    }
+  components: {
+    BlogCard
   },
-  methods: {
-    truncateText(text, length) {
-      if (text.length > length) {
-        return text.substring(0, length);
-      }
-      return text;
-    },
-    formatDate(date) {
-      return new Date(date).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      });
-    },
-    toggleExpand(postId) {
-      const post = this.blogPosts.find(p => p.id === postId);
-      if (post) {
-        post.expanded = !post.expanded;
-      }
+  setup() {
+    const { applySeo } = useSeo()
+
+    onMounted(() => {
+      applySeo({
+        title: 'Blog',
+        description: 'A structured blog experience with article cards, SEO metadata, and light/dark/system theming.'
+      })
+    })
+
+    return {
+      posts: computed(() => posts),
+      featuredPost: computed(() => featuredPost)
     }
   }
 }
 </script>
 
 <style scoped>
-.blog-container {
-  min-height: 80vh;
-  padding: 60px 40px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
+.blog-page {
+  color: var(--app-text);
 }
 
-.blog-header {
-  text-align: center;
-  margin-bottom: 60px;
-  padding-bottom: 40px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+.lead {
+  color: var(--app-muted);
 }
 
-.blog-header h1 {
-  font-size: 3.5rem;
-  margin-bottom: 15px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.blog-page__eyebrow {
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--app-accent);
+  font-weight: 700;
 }
 
-.blog-subtitle {
-  font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-style: italic;
-}
-
-.blog-posts {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.blog-post {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 30px;
-  margin-bottom: 30px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.blog-post:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.post-header {
-  margin-bottom: 20px;
-}
-
-.post-header h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-.post-subtitle {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.85);
-  text-align: left;
-  margin-bottom: 8px;
-}
-
-.post-date {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
-  text-align: left;
-  font-style: italic;
-}
-
-.post-content {
-  text-align: left;
-}
-
-.post-text {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.95);
-  margin-bottom: 15px;
-}
-
-.read-more {
-  color: #ffd700;
-  text-decoration: none;
-  font-weight: bold;
-  margin-left: 5px;
-  transition: color 0.3s ease;
-}
-
-.read-more:hover {
-  color: #ffed4e;
-  text-decoration: underline;
-}
-
-.expanded-text {
-  background: rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  border-left: 3px solid #ffd700;
-  border-radius: 5px;
-  margin-top: 15px;
-  animation: slideDown 0.3s ease;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    max-height: 0;
-  }
-  to {
-    opacity: 1;
-    max-height: 1000px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .blog-container {
-    padding: 40px 20px;
-  }
-
-  .blog-header h1 {
-    font-size: 2.5rem;
-  }
-
-  .blog-post {
-    padding: 20px;
-  }
-
-  .post-header h2 {
-    font-size: 1.5rem;
-  }
+.featured-card,
+.architecture-card {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
 }
 </style>
