@@ -54,6 +54,7 @@ import { computed, onMounted, reactive, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { posts } from '@/data/blogPosts'
 import { useSeo } from '@/composables/useSeo'
+// import NavBarComponent from '@/components/NavBarComponent.vue'
 
 export default {
   name: 'BlogDetailView',
