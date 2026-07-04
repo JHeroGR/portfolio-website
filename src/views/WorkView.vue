@@ -5,7 +5,8 @@
         v-for="filter in filters" 
         :key="filter.id" 
         :class="[filter.buttontype, { active: filterWorkType === filter.filterWorkType }]"          
-        @click="filterWorktype(filter.filterWorkType)">
+        @click="filterWorktype(filter.filterWorkType)"
+        id="category-buttons">
         {{ filter.name }}
       </button>
 
@@ -24,7 +25,6 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -75,7 +75,7 @@ export default {
 </script>
 
 <style>
-button {
+#category-buttons {
   margin: 5px;
   margin-bottom: 20px;
 }
