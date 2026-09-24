@@ -31,7 +31,7 @@ export default {
 
 <style scoped>
 .blog-card {
-  display: block;
+  display: inline;
   color: inherit;
 }
 

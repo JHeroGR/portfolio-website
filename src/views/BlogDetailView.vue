@@ -18,27 +18,6 @@
             {{ paragraph }}
           </p>
         </div>
-
-        <!-- <section class="comment-section mt-5">
-          <h2 class="h5 fw-semibold">Comments</h2>
-          <form class="comment-form mt-3" @submit.prevent="submitComment">
-            <label class="form-label" for="comment-name">Name</label>
-            <input id="comment-name" v-model="newComment.name" class="form-control mb-3" placeholder="Your name" required />
-
-            <label class="form-label" for="comment-body">Comment</label>
-            <textarea id="comment-body" v-model="newComment.body" class="form-control" rows="3" placeholder="Share your thoughts" required></textarea>
-
-            <button class="btn btn-outline-success mt-3" type="submit">Post comment</button>
-          </form>
-
-          <div v-if="comments.length" class="comments-list mt-4">
-            <div v-for="(comment, index) in comments" :key="index" class="comment-card p-3 rounded-3 mt-3">
-              <p class="fw-semibold mb-1">{{ comment.name }}</p>
-              <p class="mb-0">{{ comment.body }}</p>
-            </div>
-          </div>
-          <p v-else class="text-muted mt-3">No comments yet. Be the first to share an idea.</p>
-        </section> -->
       </article>
 
       <div v-else class="detail-card p-4 rounded-4 shadow-sm">

@@ -52,6 +52,7 @@ import BlogCardComponent from '@/components/BlogCardComponent.vue'
 import { featuredPost, posts } from '@/data/blogPosts'
 import { useSeo } from '@/composables/useSeo'
 
+
 export default {
   name: 'BlogView',
   components: {
