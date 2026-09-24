@@ -29,7 +29,18 @@ import ThemeToggle from '@/components/ThemeToggle.vue'
 import { useTheme } from '@/composables/useTheme'
 
 export default {
-    name: 'NavBarComponent'
+  name: 'NavBarComponent',
+  components: {
+    ThemeToggle
+  },
+  setup() {
+    const { themeMode, setTheme } = useTheme()
+
+    return {
+      themeMode,
+      setTheme
+    }
+  }
 }
 </script>
 

@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'BlogCard',
+  name: 'BlogCardComponent',
   props: {
     post: {
       type: Object,

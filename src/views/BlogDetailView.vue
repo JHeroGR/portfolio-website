@@ -19,7 +19,7 @@
           </p>
         </div>
 
-        <section class="comment-section mt-5">
+        <!-- <section class="comment-section mt-5">
           <h2 class="h5 fw-semibold">Comments</h2>
           <form class="comment-form mt-3" @submit.prevent="submitComment">
             <label class="form-label" for="comment-name">Name</label>
@@ -38,7 +38,7 @@
             </div>
           </div>
           <p v-else class="text-muted mt-3">No comments yet. Be the first to share an idea.</p>
-        </section>
+        </section> -->
       </article>
 
       <div v-else class="detail-card p-4 rounded-4 shadow-sm">

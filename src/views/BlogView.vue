@@ -29,7 +29,7 @@
 
       <section class="row row-cols-1 row-cols-md-2 g-4 mb-5">
         <div v-for="post in posts" :key="post.slug" class="col">
-          <BlogCard :post="post" />
+          <BlogCardComponent :post="post" />
         </div>
       </section>
 
@@ -48,14 +48,14 @@
 
 <script>
 import { computed, onMounted } from 'vue'
-import BlogCard from '@/components/BlogCard.vue'
+import BlogCardComponent from '@/components/BlogCardComponent.vue'
 import { featuredPost, posts } from '@/data/blogPosts'
 import { useSeo } from '@/composables/useSeo'
 
 export default {
   name: 'BlogView',
   components: {
-    BlogCard
+    BlogCardComponent
   },
   setup() {
     const { applySeo } = useSeo()
