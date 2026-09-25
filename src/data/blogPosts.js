@@ -59,7 +59,25 @@ export const posts = [
         ]
       }
     ]
+  },
+  {
+    slug: 'getting-started-with-vuejs',
+    title: 'Getting Started with Vue.js',
+    excerpt: 'A beginner\'s guide to building reactive web applications',
+    category: 'Development',
+    publishedAt: 'July 15, 2026',
+    readTime: '6 min read',
+    featured: false,
+    sections: [
+      {
+        heading: 'A simple foundation',
+        content: [
+          'Vue.js is a progressive JavaScript framework that makes building interactive user interfaces simple and enjoyable. Whether you\'re building a small widget or a full-featured application, Vue scales from a simple library to a sophisticated framework. Vue\'s reactivity system automatically tracks dependencies and efficiently updates the DOM when data changes. One of the best parts about Vue is its gentle learning curve - if you know HTML, CSS, and JavaScript, you can pick up Vue in a matter of days. It combines the best ideas from React and Angular while being easier to learn than both.',
+        ]
+      }
+    ]
   }
+
 ]
 
 export const featuredPost = posts.find((post) => post.featured) || posts[0]

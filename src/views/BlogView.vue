@@ -15,7 +15,10 @@
             <p class="small text-uppercase mb-2">Featured article</p>
             <h2 class="h3 fw-semibold">{{ featuredPost.title }}</h2>
             <p class="mb-3">{{ featuredPost.excerpt }}</p>
-            <router-link class="btn btn-outline-primary" :to="{ name: 'blog-detail', params: { slug: featuredPost.slug } }">
+            <router-link
+              class="btn btn-outline-primary"
+              :to="{ name: 'blog-detail', params: { slug: featuredPost.slug } }"
+            >
               Read article
             </router-link>
           </div>
@@ -28,8 +31,8 @@
       </section>
 
       <section class="row row-cols-1 row-cols-md-2 g-4 mb-5">
-        <div v-for="post in posts" :key="post.slug" class="col">
-          <BlogCard :post="post" />
+        <div v-for="bp in blogposts" :key="bp.slug" class="col">
+          <BlogCardComponent :post="bp" />
         </div>
       </section>
 
@@ -47,29 +50,37 @@
 </template>
 
 <script>
-import { computed, onMounted } from 'vue'
-import BlogCard from '@/components/BlogCard.vue'
-import { featuredPost, posts } from '@/data/blogPosts'
-import { useSeo } from '@/composables/useSeo'
+import BlogCardComponent from '@/components/BlogCardComponent.vue'
+import { db } from '@/firebase'
+import { collection, getDocs } from 'firebase/firestore'
+
 
 export default {
   name: 'BlogView',
   components: {
-    BlogCard
+    BlogCardComponent
   },
-  setup() {
-    const { applySeo } = useSeo()
-
-    onMounted(() => {
-      applySeo({
-        title: 'Blog',
-        description: 'A structured blog experience with article cards, SEO metadata, and light/dark/system theming.'
-      })
-    })
-
+  data() {
     return {
-      posts: computed(() => posts),
-      featuredPost: computed(() => featuredPost)
+      blogposts: []
+    }
+  },
+  mounted() {
+    this.fetchPosts()
+  },
+  methods: {
+    async fetchPosts() {
+      try {
+        const querySnapshot = await getDocs(collection(db, 'blogposts'))
+
+        this.blogposts = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }))
+        console.log('blogposts:', this.blogposts)
+      } catch (error) {
+        console.error('Failed to read blogposts:', error)
+      }
     }
   }
 }

@@ -4,7 +4,7 @@
             <div v-for="certificate in certificates" :key="certificate.id">
                 <div class="row">
                     <div class="col-md-8">
-                        <img :src=certificate.url class="image" />
+                        <img :src="certificate.url" :alt="certificate.title" class="image" />
                     </div>
                     <div class="col-md-4">
                         <ul>
@@ -33,19 +33,19 @@ export default {
   mounted() {
     this.fetchCertificates()
   },
-  beforeRouteUpdate(to, from, next) {
-    this.fetchData();
-    next()
-  },
   methods: {
-    async fetchCertificates () {
-        const colRef = collection(db, 'certificates')
-        const querySnapshot = await getDocs(colRef)
+    async fetchCertificates() {
+        try {
+            const querySnapshot = await getDocs(collection(db, 'certificates'))
 
-        this.certificates = querySnapshot.docs.map(doc => ({
-            id: doc.id,
-            ...doc.data()
-        }));
+            this.certificates = querySnapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data()
+            }))
+            console.log('certificates:', this.certificates)
+        } catch (error) {
+            console.error('Failed to read certificates:', error)
+        }
     }
   }
 }

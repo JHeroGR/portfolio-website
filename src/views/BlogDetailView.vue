@@ -18,29 +18,7 @@
             {{ paragraph }}
           </p>
         </div>
-
-        <section class="comment-section mt-5">
-          <h2 class="h5 fw-semibold">Comments</h2>
-          <form class="comment-form mt-3" @submit.prevent="submitComment">
-            <label class="form-label" for="comment-name">Name</label>
-            <input id="comment-name" v-model="newComment.name" class="form-control mb-3" placeholder="Your name" required />
-
-            <label class="form-label" for="comment-body">Comment</label>
-            <textarea id="comment-body" v-model="newComment.body" class="form-control" rows="3" placeholder="Share your thoughts" required></textarea>
-
-            <button class="btn btn-outline-success mt-3" type="submit">Post comment</button>
-          </form>
-
-          <div v-if="comments.length" class="comments-list mt-4">
-            <div v-for="(comment, index) in comments" :key="index" class="comment-card p-3 rounded-3 mt-3">
-              <p class="fw-semibold mb-1">{{ comment.name }}</p>
-              <p class="mb-0">{{ comment.body }}</p>
-            </div>
-          </div>
-          <p v-else class="text-muted mt-3">No comments yet. Be the first to share an idea.</p>
-        </section>
       </article>
-
       <div v-else class="detail-card p-4 rounded-4 shadow-sm">
         <h1 class="h3">Article not found</h1>
         <p class="mb-0">The requested post is not available yet. Choose another article from the blog index.</p>
@@ -50,11 +28,10 @@
 </template>
 
 <script>
-import { computed, onMounted, reactive, ref } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { posts } from '@/data/blogPosts'
 import { useSeo } from '@/composables/useSeo'
-// import NavBarComponent from '@/components/NavBarComponent.vue'
 
 export default {
   name: 'BlogDetailView',
@@ -63,21 +40,6 @@ export default {
     const { applySeo } = useSeo()
 
     const post = computed(() => posts.find((entry) => entry.slug === route.params.slug))
-    const comments = ref([])
-    const newComment = reactive({ name: '', body: '' })
-
-    const submitComment = () => {
-      if (!newComment.name.trim() || !newComment.body.trim()) return
-
-      comments.value.push({
-        name: newComment.name.trim(),
-        body: newComment.body.trim()
-      })
-
-      newComment.name = ''
-      newComment.body = ''
-    }
-
     onMounted(() => {
       if (post.value) {
         applySeo({
@@ -92,7 +54,7 @@ export default {
       }
     })
 
-    return { post, comments, newComment, submitComment }
+    return { post }
   }
 }
 </script>
@@ -120,19 +82,4 @@ export default {
   font-weight: 700;
 }
 
-.comment-section {
-  border-top: 1px solid var(--app-border);
-  padding-top: 1.5rem;
-}
-
-.comment-form .form-control {
-  background: var(--app-surface);
-  color: var(--app-text);
-  border-color: var(--app-border);
-}
-
-.comment-card {
-  background: rgba(66, 184, 131, 0.08);
-  border: 1px solid rgba(66, 184, 131, 0.15);
-}
 </style>

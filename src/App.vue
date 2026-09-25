@@ -77,7 +77,7 @@ body {
 }
 
 .text-muted {
-  color: var(--app-muted) !important;
+  color: var(--app-text) !important;
 }
 
 .app-shell {

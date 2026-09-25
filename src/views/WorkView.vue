@@ -1,12 +1,11 @@
 <template>
   <div class="work">
     <div class="container">
-      <button 
-        v-for="filter in filters" 
-        :key="filter.id" 
-        :class="[filter.buttontype, { active: filterWorkType === filter.filterWorkType }]"          
-        @click="filterWorktype(filter.filterWorkType)"
-        id="category-buttons">
+      <button
+        v-for="filter in filters"
+        :key="filter.id"
+        :class="['category-buttons', filter.buttontype, { active: filterWorkType === filter.filterWorkType }]"
+        @click="filterWorktype(filter.filterWorkType)">
         {{ filter.name }}
       </button>
 
@@ -17,7 +16,6 @@
               :src="project.img_src"
               :projectname="project.title"
               :worktype="project.worktype"
-              :description="project.description"
               :href="project.href"
             />
           </div>
@@ -53,19 +51,19 @@ export default {
   mounted() {
     this.fetchProjects()
   },
-  beforeRouteUpdate(to, from, next) {
-    this.fetchData(); // Replace with your data fetching method
-    next();
-  },
   methods: {
-    async fetchProjects () {
-      const colRef = collection(db, 'projects'); // valid path: 3 segments
-      const querySnapshot = await getDocs(colRef);
+    async fetchProjects() {
+      try {
+        const querySnapshot = await getDocs(collection(db, 'projects'))
 
-      this.projects = querySnapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      }));
+        this.projects = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }))
+        console.log('projects:', this.projects)
+      } catch (error) {
+        console.error('Failed to read projects:', error)
+      }
     },
     filterWorktype(selectedFilter) {
       this.filterWorkType = selectedFilter; // Set the global filter type
@@ -75,7 +73,7 @@ export default {
 </script>
 
 <style>
-#category-buttons {
+.category-buttons {
   margin: 5px;
   margin-bottom: 20px;
 }
