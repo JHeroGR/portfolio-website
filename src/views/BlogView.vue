@@ -28,8 +28,8 @@
       </section>
 
       <section class="row row-cols-1 row-cols-md-2 g-4 mb-5">
-        <div v-for="post in posts" :key="post.slug" class="col">
-          <BlogCardComponent :post="post" />
+        <div v-for="bp in blogposts" :key="bp.slug" class="col">
+          <BlogCardComponent :post="bp"/>
         </div>
       </section>
 
@@ -47,33 +47,85 @@
 </template>
 
 <script>
-import { computed, onMounted } from 'vue'
-import BlogCardComponent from '@/components/BlogCardComponent.vue'
-import { featuredPost, posts } from '@/data/blogPosts'
-import { useSeo } from '@/composables/useSeo'
+import BlogCardComponent from '@/components/BlogCardComponent.vue';
+import { db } from '@/firebase';
+import { collection, getDocs } from 'firebase/firestore';
 
 
 export default {
   name: 'BlogView',
   components: {
-    BlogCardComponent
+    BlogCardComponent,
   },
-  setup() {
-    const { applySeo } = useSeo()
-
-    onMounted(() => {
-      applySeo({
-        title: 'Blog',
-        description: 'A structured blog experience with article cards, SEO metadata, and light/dark/system theming.'
-      })
-    })
-
+  data() {
     return {
-      posts: computed(() => posts),
-      featuredPost: computed(() => featuredPost)
+      blogposts: []
+    }
+  },
+  mounted() {
+    this.fetchPosts()
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.fetchData();
+    next()
+  },
+  methods: {
+    async fetchPosts () {
+        const colRef = collection(db, 'blogposts')
+        try {
+          const querySnapshot = await getDocs(colRef)
+
+          this.blogposts = querySnapshot.docs.map(doc => ({
+            id: doc.slug,
+            ...doc.data()
+          }))
+          console.log('blogposts:', this.blogposts)
+      } catch (error) {
+        console.error('Failed to read blogposts', error)
+      }
     }
   }
 }
+
+
+// export default {
+//   name: 'BlogView',
+//   components: {
+//     BlogCardComponent
+//   },
+//   setup() {
+//     const { applySeo } = useSeo()
+    
+//     const blogposts = ref([])
+
+//     const fetchPosts = async() => {
+//       try {
+//         const querySnapshot = await getDocs(collection(db, 'blogposts'))
+//         blogposts.value = querySnapshot.docs.map(doc => ({
+//             id: doc.slug,
+//             ...doc.data()
+//         }))
+//         console.log(blogposts.value)
+//       } catch (e) {
+//         console.log('query has not returned')
+//       }
+//     }
+
+  //   onMounted(() => {
+  //     fetchPosts()
+  //     applySeo({
+  //       title: 'Blog',
+  //       description: 'A structured blog experience with article cards, SEO metadata, and light/dark/system theming.'
+  //     })
+  //   })
+
+  //   return {
+  //     posts: computed(() => posts),
+  //     featuredPost: computed(() => featuredPost),
+  //     blogposts
+  //   }
+  // }
+// }
 </script>
 
 <style scoped>

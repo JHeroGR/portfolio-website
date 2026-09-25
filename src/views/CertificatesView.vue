@@ -40,12 +40,17 @@ export default {
   methods: {
     async fetchCertificates () {
         const colRef = collection(db, 'certificates')
+        try {
         const querySnapshot = await getDocs(colRef)
 
         this.certificates = querySnapshot.docs.map(doc => ({
             id: doc.id,
             ...doc.data()
         }));
+        console.log('certificates:', this.certificates)
+    } catch (error) {
+        console.error('Failed to read certificates', error)
+    }
     }
   }
 }

@@ -5,7 +5,7 @@
   >
     <article class="card h-100 border-0 shadow-sm blog-card__inner">
       <div class="card-body text-start">
-        <p class="small text-uppercase mb-2 blog-card__eyebrow">{{ post.category }}</p>
+        <p class="small text-uppercase mb-2 blog-card__eyebrow">{{ categoryNaming(post.category) }}</p>
         <h3 class="h5 fw-semibold mb-3">{{ post.title }}</h3>
         <p class="mb-3">{{ post.excerpt }}</p>
       </div>
@@ -25,6 +25,16 @@ export default {
       type: Object,
       required: true
     }
+  },
+  methods: {
+    categoryNaming(categoryNum) {
+
+      switch (categoryNum) {
+        case 1:
+          return "Development"
+      }
+
+    },
   }
 }
 </script>

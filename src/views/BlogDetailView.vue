@@ -19,7 +19,6 @@
           </p>
         </div>
       </article>
-
       <div v-else class="detail-card p-4 rounded-4 shadow-sm">
         <h1 class="h3">Article not found</h1>
         <p class="mb-0">The requested post is not available yet. Choose another article from the blog index.</p>
@@ -33,7 +32,6 @@ import { computed, onMounted, reactive, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { posts } from '@/data/blogPosts'
 import { useSeo } from '@/composables/useSeo'
-// import NavBarComponent from '@/components/NavBarComponent.vue'
 
 export default {
   name: 'BlogDetailView',

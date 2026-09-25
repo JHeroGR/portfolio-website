@@ -60,12 +60,17 @@ export default {
   methods: {
     async fetchProjects () {
       const colRef = collection(db, 'projects'); // valid path: 3 segments
-      const querySnapshot = await getDocs(colRef);
+      try {
+        const querySnapshot = await getDocs(colRef);
 
-      this.projects = querySnapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      }));
+        this.projects = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        console.log('projects:', this.projects)
+      } catch (error) {
+        console.error('Failed to read projects:', error)
+      }
     },
     filterWorktype(selectedFilter) {
       this.filterWorkType = selectedFilter; // Set the global filter type
