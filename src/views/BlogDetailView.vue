@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { computed, onMounted, reactive, ref } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { posts } from '@/data/blogPosts'
 import { useSeo } from '@/composables/useSeo'
@@ -40,21 +40,6 @@ export default {
     const { applySeo } = useSeo()
 
     const post = computed(() => posts.find((entry) => entry.slug === route.params.slug))
-    const comments = ref([])
-    const newComment = reactive({ name: '', body: '' })
-
-    const submitComment = () => {
-      if (!newComment.name.trim() || !newComment.body.trim()) return
-
-      comments.value.push({
-        name: newComment.name.trim(),
-        body: newComment.body.trim()
-      })
-
-      newComment.name = ''
-      newComment.body = ''
-    }
-
     onMounted(() => {
       if (post.value) {
         applySeo({
@@ -69,7 +54,7 @@ export default {
       }
     })
 
-    return { post, comments, newComment, submitComment }
+    return { post }
   }
 }
 </script>
@@ -97,19 +82,4 @@ export default {
   font-weight: 700;
 }
 
-.comment-section {
-  border-top: 1px solid var(--app-border);
-  padding-top: 1.5rem;
-}
-
-.comment-form .form-control {
-  background: var(--app-surface);
-  color: var(--app-text);
-  border-color: var(--app-border);
-}
-
-.comment-card {
-  background: rgba(66, 184, 131, 0.08);
-  border: 1px solid rgba(66, 184, 131, 0.15);
-}
 </style>

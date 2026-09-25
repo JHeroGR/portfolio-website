@@ -31,7 +31,9 @@ export default {
 
       switch (categoryNum) {
         case 1:
-          return "Development"
+          return "development"
+        case 2:
+          return "design"
       }
 
     },
@@ -41,7 +43,8 @@ export default {
 
 <style scoped>
 .blog-card {
-  display: inline;
+  display: block;
+  height: 100%;
   color: inherit;
 }
 
@@ -53,7 +56,6 @@ export default {
 
 .blog-card:hover .blog-card__inner {
   transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(67, 205, 191, 0.12);
 }
 
 .blog-card__eyebrow {
