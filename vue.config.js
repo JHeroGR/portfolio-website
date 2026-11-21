@@ -2,7 +2,7 @@ const { defineConfig } = require('@vue/cli-service')
 
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: "/",
+  publicPath: process.env.NODE_ENV === 'production' ? '/portfolio-website/' : '/',
   configureWebpack: {
     watchOptions: {
       poll: 2000, // Increased to 2 seconds to save laptop CPU/battery on an external drive
