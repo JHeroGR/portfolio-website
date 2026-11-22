@@ -12,8 +12,8 @@ Welcome to my personal developer portfolio website! This project showcases who I
 - 🌟 Clean, responsive design
 - 📱 Mobile-friendly layout
 - 🎨 Interactive UI with smooth animations
-- 🔗 Links to GitHub, LinkedIn, and resume
-- 🧰 Project cards with descriptions and repo links
+- 🔗 Links to GitHub, LinkedIn, and Resume
+- 🧰 Project cards filtered by color with short descriptions and repo links
 
 ---
 
@@ -23,7 +23,8 @@ Welcome to my personal developer portfolio website! This project showcases who I
 - **CSS3**
 - **Vanilla JavaScript**
 - **VueJS**
-- **Adobe Photoshop / Figma** – for mockups/designs
+- **Firebase Firestore** – for database
+- **Cloudinary** – for image hosting
 
 ---
 
@@ -49,13 +50,8 @@ I’m a developer with experience in:
 - UI/UX Design (Google UX Design certified)
 - QA testing & CI/CD pipelines
 
-I’m currently exploring front-end, full-stack, and QA roles. More about me [here](https://jherogr.github.io/portfolio-website).
+I’m currently exploring IT, full-stack, and QA roles.
 
----
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
