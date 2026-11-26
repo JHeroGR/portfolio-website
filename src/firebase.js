@@ -14,8 +14,6 @@ const firebaseConfig = {
   appId: process.env.VUE_APP_FIREBASE_APP_ID
 };
 
-<<<<<<< HEAD
-=======
 const missingConfigKeys = Object.entries(firebaseConfig)
   .filter(([, value]) => !value)
   .map(([key]) => key);
@@ -26,7 +24,6 @@ if (missingConfigKeys.length) {
   );
 }
 
->>>>>>> b0f66067993245f515c092a8047bfa8a41928dde
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app)

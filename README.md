@@ -1,9 +1,5 @@
 # 💼 Portfolio Website
 
-<<<<<<< HEAD
-![Portfolio Preview](https://res.cloudinary.com/dbwepom1j/image/upload/v1744265215/portfolio-website-image_qveerb.png)
-=======
->>>>>>> b0f66067993245f515c092a8047bfa8a41928dde
 
 Welcome to my personal developer portfolio website! This project showcases who I am, what I’ve built, and the skills I bring to the table. Built with **HTML**, **CSS**, and **JavaScript**, using **VueJS** with **Firebase Firestore** for Database Storage, and **Cloudinary** for Image Hosting, it serves as a central hub for all my professional links and personal projects.
 
@@ -16,13 +12,8 @@ Welcome to my personal developer portfolio website! This project showcases who I
 - 🌟 Clean, responsive design
 - 📱 Mobile-friendly layout
 - 🎨 Interactive UI with smooth animations
-<<<<<<< HEAD
-- 🔗 Links to GitHub, LinkedIn, and resume
-- 🧰 Project cards with descriptions and repo links
-=======
 - 🔗 Links to GitHub, LinkedIn, and Resume
 - 🧰 Project cards filtered by color with short descriptions and repo links
->>>>>>> b0f66067993245f515c092a8047bfa8a41928dde
 
 ---
 
@@ -32,12 +23,8 @@ Welcome to my personal developer portfolio website! This project showcases who I
 - **CSS3**
 - **Vanilla JavaScript**
 - **VueJS**
-<<<<<<< HEAD
-- **Adobe Photoshop / Figma** – for mockups/designs
-=======
 - **Firebase Firestore** – for database
 - **Cloudinary** – for image hosting
->>>>>>> b0f66067993245f515c092a8047bfa8a41928dde
 
 ---
 
@@ -63,18 +50,8 @@ I’m a developer with experience in:
 - UI/UX Design (Google UX Design certified)
 - QA testing & CI/CD pipelines
 
-<<<<<<< HEAD
-I’m currently exploring front-end, full-stack, and QA roles. More about me [here](https://jherogr.github.io/portfolio-website).
-
----
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-=======
 I’m currently exploring IT, full-stack, and QA roles.
 
->>>>>>> b0f66067993245f515c092a8047bfa8a41928dde
 
 ---
 

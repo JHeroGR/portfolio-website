@@ -77,10 +77,6 @@ export default {
           id: doc.id,
           ...doc.data()
         }))
-<<<<<<< HEAD
-        console.log('blogposts:', this.blogposts)
-=======
->>>>>>> b0f66067993245f515c092a8047bfa8a41928dde
       } catch (error) {
         console.error('Failed to read blogposts:', error)
       }
